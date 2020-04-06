@@ -13,12 +13,16 @@ public class Program {
     }
 
 
-
     public void setDuration(int duration) {
         this.duration += duration;
     }
 
-    public int getDuration() {
-        return duration*2;
+    public String calculateDuration() {
+        int totalDuration = 0;
+        for (Exercise e : exercises) {
+            totalDuration += e.duration*2;
+        }
+        return  "This program takes "+totalDuration+ " minutes from start to finish";
     }
+
 }

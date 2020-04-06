@@ -16,11 +16,10 @@ public abstract class Exercise {
 
     @Override
     public String toString() {
-        return "Exercise{" +
-                "intensity=" + intensity +
-                ", duration=" + duration +
-                ", repetitions=" + repetitions +
-                ", sets=" + sets +
-                '}';
+        return "exercise " + '\n' +
+                "Intensity is " + intensity + "% " +'\n' +
+                "Duration is " + duration + " mins "+ '\n' +
+                repetitions + " Repetitions" +'\n' +
+                sets + " Sets " +'\n'+'\n';
     }
 }
