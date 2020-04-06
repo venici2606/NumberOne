@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class ExerciseManager {
 
 
+    //TODO make the toString in each class contain its own name!! its for the program-isbalanced-method.
+
     public static void main(String[] args) {
 
 
@@ -22,16 +24,34 @@ public class ExerciseManager {
         e = new Endurance(30, 60,15,6,"kettlebells");
         exercises.add(e);
 
+        e = new Endurance(70, 15,15,6,"kettlebells");
+        exercises.add(e);
+
         Program p;
         // the programs are made.
         p = new Program();
 
-        // the exercises are added to the program.
+//1. Exercises are grouped into Programs.
         p.addExercises(exercises);
 
-        // the duration for the programs are set.
-        p.setDuration(e.duration);
+// 1 a. Each program keeps an account of the overall intensity
+ // (the highest intensity among the included exercises).
 
+        p.overallIntensity();
+        System.out.println(p.intensitylevel + " % is the overall intensity for this program");
+
+// 1 b. Each program keeps account of whether or not it is balanced.
+//     A balanced program has at least one exercise of each type.
+       // System.out.println(p.exercises);
+
+        System.out.println(p.isProgramBalanced());
+
+//1 c. Each program has the exercises sorted in order of increasing intensity.
+
+
+
+//1 d. Overall duration for the programs are set.
+        p.setDuration(e.duration);
 
         System.out.println(p.calculateDuration());
 
