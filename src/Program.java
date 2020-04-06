@@ -13,4 +13,12 @@ public class Program {
     }
 
 
+
+    public void setDuration(int duration) {
+        this.duration += duration;
+    }
+
+    public int getDuration() {
+        return duration*2;
+    }
 }
