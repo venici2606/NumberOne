@@ -7,14 +7,6 @@ import static junit.framework.TestCase.assertTrue;
 
 public class ExerciseManagerTest {
 
-    @Test
-    public void EnduranceClassTest(){
-
-        Exercise enduranceTest = new Endurance(1,2,3,4,"five");
-        assertTrue(enduranceTest.intensity == 1);
-        System.out.println("Testing for correct intensity in Endurance object");
-    }
-
 
     @Test
     public void ExerciseGroupInProgramTest(){
@@ -38,13 +30,4 @@ public class ExerciseManagerTest {
 
 // TODO Write inn the failed tests.
 
-   /*
-   @Test
-    public void EnduranceClassTest(){
-        Exercise test = new Endurance();
-        test.Method();
- //Cannot test for void. Wanted to check if Exercise.Method() was inherited.
-        assertTrue(test.Method() == "This is endurance");
-         equals(test.Method() == "This is endurance");
-    }
-    */
+

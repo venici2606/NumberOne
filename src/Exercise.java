@@ -5,7 +5,7 @@ public abstract class Exercise {
     int sets;
 
 
-    abstract void Method();
+    abstract String Method();
 
     public Exercise(int intensity, int duration, int repetitions, int sets) {
         this.intensity = intensity;

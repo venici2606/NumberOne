@@ -7,8 +7,9 @@ public class Endurance extends Exercise{
     }
 
     @Override
-    void Method() {
-        System.out.println("This is endurance");
+    String Method() {
+        String enduranceString = "This is endurance";
+        return enduranceString;
     }
 
     @Override
