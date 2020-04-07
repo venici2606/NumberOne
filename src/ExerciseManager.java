@@ -1,4 +1,4 @@
 import java.util.ArrayList;
 
-public class ExerciseManager {
+public abstract class ExerciseManager {
 }
