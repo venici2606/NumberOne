@@ -1,8 +1,25 @@
 public abstract class Exercise {
+        int intensity;
+        int duration;
+        int repetitions;
+        int sets;
 
-    int intensity;
-    int duration;
-    int repetition;
-    int sets;
 
-}
+        public Exercise(int intensity, int duration, int repetitions, int sets) {
+            this.intensity = intensity;
+            this.duration = duration;
+            this.repetitions = repetitions;
+            this.sets = sets;
+        }
+
+        @Override
+        public String toString() {
+            return "exercise " + '\n' +
+                    "Intensity is " + intensity + "% " +'\n' +
+                    "Duration is " + duration + " mins "+ '\n' +
+                    repetitions + " Repetitions" +'\n' +
+                    sets + " Sets " +'\n'+'\n';
+        }
+    }
+
+
