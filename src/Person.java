@@ -12,13 +12,13 @@ public class Person {
     @Override
     public String toString() {
         return "Preferred exercise: " + preferredExercise + '\n' +
-                "Acceptable intensity: " + acceptableIntensity + " %";
+                "Acceptable intensity: " + acceptableIntensity + " %" + '\n';
     }
-
+/*
     ArrayList<Person> personData = new ArrayList<>();
 
     public void gatherPersons(ArrayList<Person> personData) {
         this.personData = personData;
-    }
+    } */
 
 }
