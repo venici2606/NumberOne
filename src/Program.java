@@ -16,7 +16,6 @@ public class Program {
     }
 
 
-
 // 1a. Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
     public void overallIntensity(){
         intensitylevel = 0;

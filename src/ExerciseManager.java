@@ -9,6 +9,7 @@ public class ExerciseManager {
     public static void main(String[] args) {
 
 
+
        //  System.out.println(endurance.toString());
         // this is an arraylist for a program.
         ArrayList <Exercise> exercises = new ArrayList<>();
@@ -18,13 +19,16 @@ public class ExerciseManager {
         Exercise e;
 
 //1. Exercises are added to Programs.
-        e = new Endurance(50, 30, 15,3,"your own bodyweight");
+        e = new Endurance(50, 30, 15,3,"your own body weight");
         exercises.add(e);
 
-        e = new Endurance(30, 60,15,6,"kettlebells");
+        e = new Endurance(30, 60,15,6,"yoga mat");
         exercises.add(e);
 
-        e = new Endurance(70, 15,15,6,"kettlebells");
+        e = new Endurance(70, 15,15,6,"running shoes");
+        exercises.add(e);
+
+        e = new Strength(20,1,3,2,4,"kettle bells");
         exercises.add(e);
 
         Program p;
@@ -42,7 +46,7 @@ public class ExerciseManager {
 
 // 1 b. Each program keeps account of whether or not it is balanced.
 //     A balanced program has at least one exercise of each type.
-       // System.out.println(p.exercises);
+       System.out.println(p.exercises);
 
         System.out.println(p.isProgramBalanced());
 
@@ -56,7 +60,7 @@ public class ExerciseManager {
         System.out.println(p.calculateDuration());
 
 
-
+        System.out.println(e.toString());
        // System.out.println(program1.exercises);
 
 
