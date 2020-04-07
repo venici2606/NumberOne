@@ -19,16 +19,16 @@ public class ExerciseManager {
         Exercise e;
 
 //1. Exercises are added to Programs.
-        e = new Endurance(50, 30, 15,3,"your own body weight");
+        e = new EnduranceExercise(50, 30, 15,3,"your own body weight");
         exercises.add(e);
 
-        e = new Endurance(30, 60,15,6,"yoga mat");
+        e = new EnduranceExercise(30, 60,15,6,"yoga mat");
         exercises.add(e);
 
-        e = new Endurance(70, 15,15,6,"running shoes");
+        e = new EnduranceExercise(70, 15,15,6,"running shoes");
         exercises.add(e);
 
-        e = new Strength(20,1,3,2,4,"kettle bells");
+        e = new StrengthExercise(20,1,3,2,4,"kettle bells");
         exercises.add(e);
 
         Program p;

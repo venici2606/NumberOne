@@ -1,24 +1,23 @@
-public class Strength extends Exercise {
-    int weights;
+public class EnduranceExercise extends Exercise{
     String equipment;
 
-    public Strength(int intensity, int duration, int repetitions, int sets, int weights, String equipment) {
+    public EnduranceExercise(int intensity, int duration, int repetitions, int sets, String equipment) {
         super(intensity, duration, repetitions, sets);
-        this.weights = weights;
         this.equipment = equipment;
     }
 
     @Override
     String Method() {
-        return "this is Strength";
+        String enduranceString = "This is endurance";
+        return enduranceString;
     }
 
     @Override
     public String toString() {
-        return "For this strength exercise you need "+ weights + " kg " + equipment + '\n' +
+        return "For this endurance exercise you need "+ equipment + '\n' +
                 "Intensity is " + intensity + "% " +'\n' +
                 "Duration is " + duration + " mins "+ '\n' +
-                repetitions + " Repetitions" +'\n' +
+                 repetitions + " Repetitions" +'\n' +
                 sets + " Sets " +'\n'+'\n';
     }
 }

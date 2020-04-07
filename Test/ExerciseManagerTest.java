@@ -12,8 +12,8 @@ public class ExerciseManagerTest {
     public void ExerciseGroupInProgramTest(){
         ArrayList<Exercise> exercises = new ArrayList<>();
 
-        Exercise enduranceTest = new Endurance(1,1,1,1,"one");
-        Exercise enduranceTest2 = new Endurance(2,2,2,2,"two");
+        Exercise enduranceTest = new EnduranceExercise(1,1,1,1,"one");
+        Exercise enduranceTest2 = new EnduranceExercise(2,2,2,2,"two");
 
         exercises.add(enduranceTest);
         exercises.add(enduranceTest2);

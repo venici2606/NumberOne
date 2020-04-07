@@ -2,24 +2,24 @@ import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
 
-public class EnduranceTest {
+public class EnduranceExerciseTest {
     @Test
     public void EnduranceClassTest(){
 
-        Exercise enduranceTest = new Endurance(1,2,3,4,"five");
+        Exercise enduranceTest = new EnduranceExercise(1,2,3,4,"five");
         assertTrue(enduranceTest.intensity == 1);
         System.out.println("Testing for correct intensity in Endurance object");
     }
 
     @Test
     public void EnduranceMethodTest(){
-        Exercise enduranceTest = new Endurance(1,2,3,4,"five");
+        Exercise enduranceTest = new EnduranceExercise(1,2,3,4,"five");
         enduranceTest.Method();
         assert(enduranceTest.Method().contentEquals("This is endurance"));
     }
     @Test
     public void EnduranceToStringTest(){
-        Exercise enduranceTest = new Endurance(1,2,3,4,"five");
+        Exercise enduranceTest = new EnduranceExercise(1,2,3,4,"five");
         equals(enduranceTest.toString().contains("s"));
     }
 

@@ -4,7 +4,7 @@ public class Program {
     int duration;
     int intensitylevel;
 
-//1
+//1 Exercises are grouped into Programs.
     ArrayList<Exercise> exercises = new ArrayList<>();
 
     public void addExercises(ArrayList<Exercise> exercises) {
