@@ -1,9 +1,11 @@
 public class BalanceExercise extends Exercise{
     String equipment;
 
+
     public BalanceExercise(int intensity, int duration, int repetitions, int sets, String equipment) {
         super(intensity, duration, repetitions, sets);
         this.equipment = equipment;
+
     }
 
     @Override

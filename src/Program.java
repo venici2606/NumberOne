@@ -1,5 +1,4 @@
-
-    import java.util.ArrayList;
+    import java.util.*;
 
     public class Program {
         int duration;
@@ -49,7 +48,7 @@
             return isBalanced;
         }
 
-// 1c. Each program has the exercises sorted in order of increasing intensity.
+// 1c. Each program has the exercises sorted in order of increasing intensity.git pu
 
 
 // 1d. Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
@@ -63,4 +62,3 @@
         }
 
     }
-

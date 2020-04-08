@@ -1,4 +1,4 @@
-public abstract class Exercise {
+public class Exercise {
         int intensity;
         int duration;
         int repetitions;
