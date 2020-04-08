@@ -55,10 +55,20 @@ public class ProgramTest {
     @Test
     public void overallIntensityTest(){
 
-       programTest.overallIntensity();
+        //testing to see if intensitylevel is zero before adding exercises.
+        System.out.println(programTest.intensitylevel);
+assertEquals(programTest.intensitylevel, 0);
+
+        exercises.add(enduranceTest);
+        exercises.add(enduranceTest2);
+
+        programTest.addExercises(exercises);
+        programTest.overallIntensity();
+//testing to see if intesitylevel has changed from zero. here we want 2 as a result,
+        // endurance2 has intensity 2, while endurance1 has intensity 1, so itensity should be 2
 
         System.out.println(programTest.intensitylevel);
-       assertEquals(intensitylevel, 0);
+    assertEquals(programTest.intensitylevel, 2);
 
     }
 
