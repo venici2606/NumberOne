@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-
-
 public class PersonTest {
 
     @org.junit.Test
