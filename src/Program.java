@@ -21,9 +21,7 @@
         public void overallIntensity(){
             intensitylevel = 0;
             for (Exercise e: exercises){
-                if(intensitylevel > e.intensity){
-                    intensitylevel = intensitylevel;
-                }else{
+                if(e.intensity >intensitylevel){
                     intensitylevel = e.intensity;
                 }
             }
