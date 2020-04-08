@@ -32,14 +32,14 @@
 //  1b. Each program keeps account of whether or not it is balanced.
 //  A balanced program has at least one exercise of each type.
 
-        public boolean isProgramBalanced(){
+        public boolean isProgramBalanced() {
             boolean isBalanced = false;
 
-            if(exercises.size()> 4){
-                if(exercises.toString().contains("endurance")){
-                    if(exercises.toString().contains("flexibility")){
-                        if(exercises.toString().contains("strength")){
-                            if(exercises.toString().contains("balance")) {
+            if (exercises.size() >= 4) {
+                if (exercises.toString().contains("endurance")) {
+                    if (exercises.toString().contains("flexibility")) {
+                        if (exercises.toString().contains("strength")) {
+                            if (exercises.toString().contains("balance")) {
                                 isBalanced = true;
                             }
                         }
