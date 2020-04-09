@@ -1,5 +1,3 @@
-import org.junit.Assert;
-
 import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertTrue;
