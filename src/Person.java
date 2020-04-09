@@ -3,14 +3,14 @@ import java.util.ArrayList;
 public class Person {
     String preferredExercise;
     int acceptableIntensity;
-    static String currentProgram;
+    String currentProgram;
 
     public Person(String preferredExercise, int acceptableIntensity, String currentProgram) {
         this.preferredExercise = preferredExercise;
         this.acceptableIntensity = acceptableIntensity;
         this.currentProgram = currentProgram;
     }
-
+/*
     public String getPreferredExercise() {
         return preferredExercise;
     }
@@ -22,6 +22,8 @@ public class Person {
     public String getCurrentProgram(){
         return currentProgram;
     }
+
+ */
 
         /*
     //method overloading
