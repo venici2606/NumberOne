@@ -16,11 +16,17 @@
             this.duration += duration;
         }
 
+        public void outputProgram() {
+            ArrayList<Exercise> exercises = new ArrayList<>();
+
+        }
+
+
 
 // 1a. Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
         public void overallIntensity(){
             intensitylevel = 0;
-            for (Exercise e: exercises){
+            for (Exercise e: exercises) {
                 if(intensitylevel > e.intensity){
                     intensitylevel = intensitylevel;
                 }else{
@@ -61,6 +67,8 @@
             }
             return  "This program takes "+totalDuration+ " minutes from start to finish";
         }
+
+
 
     }
 
