@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.io.*;
+import java.util.LinkedList;
 
 
 public class ExerciseManager {
@@ -33,33 +36,37 @@ public class ExerciseManager {
         p.setDuration(e.duration);
         System.out.println(p.calculateDuration());
         System.out.println(e.toString());
-        System.out.println(p.isProgramBalanced());
+        System.out.println(p.isProgramBalanced() + " - the program is balanced." + "\n");
 
 
         // Deciding if a program is appropriate for a given person
 
-        String person ="newProgram";
-        int intensity=60;
-        int duration=30;
+        String person = "newProgram";
+        int intensity = 60;
+        int duration = 30;
         String program;
 
-        if (duration <=30 && intensity >=60){
-            program="appropriated for a given person";
+        if (duration <= 30 && intensity >= 60) {
+            program = "appropriated for a given person";
 
-        } else if (duration <=20 && intensity >=50) {
-            program=" not 100% appropriated, but close enough";
-        } else if (duration<=10 && intensity >=70) {
-            program="not so appropriated for a given person";
+        } else if (duration <= 20 && intensity >= 50) {
+            program = " not 100% appropriated, but close enough";
+        } else if (duration <= 10 && intensity >= 70) {
+            program = "not so appropriated for a given person";
         } else {
-            program="not appropriated for a given person";
+            program = "not appropriated for a given person";
         }
-        System.out.println("The program " + person + " is: " + program );
+        System.out.println("The program " + person + " is: " + program +"\n");
 
 
-
-
-}
 // Method for recommendation
+
+        Collection<Exercise> list= new LinkedList<Exercise>();
+        list.add(e);
+        System.out.println("Recommended from a given collection of programs,which is most appropriated for a given person" +
+                 "\n" + list);
+    }
+
 
 
 
