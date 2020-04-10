@@ -43,12 +43,12 @@ public class ExerciseManager {
         int duration=30;
         String program;
 
-        if (duration >=1 && intensity <=80){
+        if (duration <=30 && intensity >=60){
             program="appropriated for a given person";
 
-        } else if (duration >=0 && intensity <=80) {
+        } else if (duration <=20 && intensity >=50) {
             program=" not 100% appropriated, but close enough";
-        } else if (duration<=0 && intensity >=70) {
+        } else if (duration<=10 && intensity >=70) {
             program="not so appropriated for a given person";
         } else {
             program="not appropriated for a given person";
