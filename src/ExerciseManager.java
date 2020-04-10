@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 
 public class ExerciseManager {
-    //private programs program;
+
     public static void main(String[] args) {
 
-            /* Program */
-
         ArrayList <Exercise> exercises = new ArrayList<>();
+
         Exercise e;
 
         e = new EnduranceExercise(50, 30, 15,3,"your own body weight");
@@ -21,8 +20,10 @@ public class ExerciseManager {
         e = new StrengthExercise(20,1,3,2,4,"kettle bells");
         exercises.add(e);
 
+
         Program p;
         p = new Program();
+
 
 //1. Exercises are grouped into Programs.
         p.addExercises(exercises);
@@ -38,12 +39,13 @@ public class ExerciseManager {
                 //System.out.println(p.exercises); /* Her skrives det ut som en array med [ ... ]*/
 
                 /* Her vil vi få en oversikt som ved personList */
+        /*
         for (Exercise plist : exercises) {
             System.out.println(plist);
         }
+         */
 
-
-                // System.out.println(p.isProgramBalanced());
+        System.out.println(p.isProgramBalanced());
 
 //1 c. Each program has the exercises sorted in order of increasing intensity.
 
@@ -51,24 +53,26 @@ public class ExerciseManager {
 
 //1 d. Overall duration for the programs are set.
         p.setDuration(e.duration);
-        System.out.println(p.calculateDuration()); /* Kalkulerer dette alle exercisene eller programmene? */
+        System.out.println(p.calculateDuration());
 
 
-            //System.out.println(e.toString()); /* skriver ut siste fra arrayet */
-        // System.out.println(program1.exercises);
+        System.out.println(e.toString()); /* skriver ut siste fra arrayet */
 
-            /* Program slutt */
+            /* TEST */
+        Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
+        Program program1 = new Program();
+
+        Exercise exercise_s = new EnduranceExercise(70, 15,15,6,"running shoes");
+        Program program2 = new Program();
 
         ArrayList<Person> personList = new ArrayList<>();
 
-        Person person1 = new Person("kettle", 40, "Program en");
+        Person person1 = new Person("kettle", 40, program1);
         personList.add(person1);
 
-        Person person2 = new Person("yoga", 60, "Program to");
+        Person person2 = new Person("yoga", 60, program2);
         personList.add(person2);
-
-        Person person3 = new Person("running", 70, "Program tre");
-        personList.add(person3);
+            /* TEST SLUTT */
 
 
         // for-each loop to divide the array
@@ -87,14 +91,9 @@ public class ExerciseManager {
         System.out.println(pers.toString());
         */
 
-    }
-
-    //        Sjekk at preferred == øvelsen i programmet, og acceptableIntensity >= intensity på programmet
-
-    public static void checkProgram(){
-
-
+        // System.out.println(p.exercises);
 
     }
+
 
 }
