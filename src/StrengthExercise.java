@@ -16,7 +16,5 @@ public class StrengthExercise extends Exercise {
                 "Duration is " + duration + " mins "+ '\n' +
                 repetitions + " Repetitions" +'\n' +
                 sets + " Sets " +'\n'+'\n';
-
-
     }
 }
