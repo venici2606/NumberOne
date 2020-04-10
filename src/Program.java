@@ -1,5 +1,6 @@
 
     import java.util.ArrayList;
+    import java.util.Objects;
 
     public class Program {
         int duration;
@@ -63,7 +64,10 @@
             return  "This program takes "+totalDuration+ " minutes from start to finish";
         }
 
-
-
+        @Override
+        public String toString(){
+            return "Duration: " + duration +
+                    " and intensity: " + intensitylevel + " %" + '\n';
+        }
     }
 
