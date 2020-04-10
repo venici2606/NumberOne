@@ -16,11 +16,6 @@
             this.duration += duration;
         }
 
-        public void outputProgram() {
-            ArrayList<Exercise> exercises = new ArrayList<>();
-
-        }
-
 
 
 // 1a. Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
