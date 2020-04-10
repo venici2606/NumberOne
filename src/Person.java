@@ -3,36 +3,28 @@ import java.util.ArrayList;
 public class Person {
     String preferredExercise;
     int acceptableIntensity;
-    String currentProgram;
+    Program currentProgram;
 
-    public Person(String preferredExercise, int acceptableIntensity, String currentProgram) {
+    public Person(String preferredExercise, int acceptableIntensity, Program currentProgram) {
         this.preferredExercise = preferredExercise;
         this.acceptableIntensity = acceptableIntensity;
         this.currentProgram = currentProgram;
     }
-/*
-    public String getPreferredExercise() {
-        return preferredExercise;
-    }
 
-    public int getAcceptableIntensity() {
-        return acceptableIntensity;
-    }
+            /*      Trenger kanskje ikke dette
+                public String getPreferredExercise() {
+                    return preferredExercise;
+                }
 
-    public String getCurrentProgram(){
-        return currentProgram;
-    }
+                public int getAcceptableIntensity() {
+                    return acceptableIntensity;
+                }
 
- */
+                public String getCurrentProgram(){
+                    return currentProgram;
+                }
 
-        /*
-    //method overloading
-    public Person(String preferredExercise, int acceptableIntensity, String name) {
-        this.preferredExercise = preferredExercise;
-        this.acceptableIntensity = acceptableIntensity;
-        this.name = name;
-    }
-        */
+             */
 
     @Override
     public String toString() {
