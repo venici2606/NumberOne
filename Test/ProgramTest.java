@@ -14,7 +14,7 @@ public class ProgramTest {
     Exercise enduranceTest = new EnduranceExercise(1,1,1,1,"one");
     Exercise enduranceTest2 = new EnduranceExercise(2,2,2,2,"two");
     Exercise strengthExercise = new StrengthExercise(1,2,3,4,5,"six");
-    Exercise flexibilityExercise = new FlexibilityExercise(1,2,3,4,3);
+    Exercise flexibilityExercise = new FlexibilityExercise(1,2,3,4,"3");
     Exercise balanceExercise = new BalanceExercise(1,2,3,4,"yoga mat");
 
 
