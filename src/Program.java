@@ -51,6 +51,7 @@
 // 1c. Each program has the exercises sorted in order of increasing intensity.git pu
 
 
+
 // 1d. Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
 // durations of all the exercises it includes (to account for rest).*/
         public String calculateDuration() {
