@@ -61,10 +61,20 @@ public class ExerciseManager {
 
         /* TEST */
         Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
+        exercises.add(exercise_e);
+
         Program program1 = new Program();
+        //program1.addExercises(exercises);
+        program1.exercises.add(exercise_e);
 
         Exercise exercise_s = new EnduranceExercise(70, 15,15,6,"running shoes");
+        exercises.add(exercise_s);
+
         Program program2 = new Program();
+        //program2.addExercises(exercises);
+        program2.exercises.add(exercise_s);
+
+
 
         ArrayList<Person> personList = new ArrayList<>();
 
@@ -73,13 +83,18 @@ public class ExerciseManager {
 
         Person person2 = new Person("yoga", 60, program2);
         personList.add(person2);
+
+        System.out.println(person1);
+        System.out.println(person2);
         /* TEST SLUTT */
 
-
+/*
         // for-each loop to divide the array
         for (Person list : personList){
             System.out.println(list);
         }
+
+ */
 
 
         /*
@@ -95,6 +110,15 @@ public class ExerciseManager {
         // System.out.println(p.exercises);
 
     }
-
+/*
+    public  doesProgramFit(Person, Program) {
+        if(Program.exercises.includes(Person.preferredExercises) &&
+                !(Program.intensity > Person.preferredExcercise +10) &&
+                !(Program.intensity > preferredIntensity - 10) {
+            System.out.println("Riktig");
+        } else {
+            System.out.println("Feil");
+        }
+    }*/
 
 }
