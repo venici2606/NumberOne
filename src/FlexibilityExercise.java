@@ -1,7 +1,7 @@
 public class FlexibilityExercise extends Exercise{
-    int requirement;
+    String requirement;
 
-    public FlexibilityExercise(int intensity, int duration, int repetitions, int sets, int requirement) {
+    public FlexibilityExercise(int intensity, int duration, int repetitions, int sets, String requirement) {
         super(intensity, duration, repetitions, sets);
         this.requirement = requirement;
     }
