@@ -75,23 +75,35 @@ public class ExerciseManager {
         program1.exercises.add(exercise_b1);
         program1.exercises.add(exercise_f1);
 
-        Exercise exercise_e2 = new EnduranceExercise(70, 15,15,6,"running shoes");
+
+        Exercise exercise_e2 = new EnduranceExercise(60, 30,0,0,"cycle");
         exercises.add(exercise_e2);
+
+        Exercise exercise_f2 = new FlexibilityExercise(50, 30, 12, 2, "nothing");
+        exercises.add(exercise_f2);
 
         Program program2 = new Program();
         program2.exercises.add(exercise_e2);
+        program2.exercises.add(exercise_f2);
+
 
 
         // ArrayList<Person> personList = new ArrayList<>();
 
-        Person person1 = new Person("kettle", 40, program1);
+        Person person1 = new Person("kettle bell", 50, program1);
         //personList.add(person1);
 
         Person person2 = new Person("yoga", 60, program2);
         //personList.add(person2);
 
         System.out.println(person1);
+        program1.overallIntensity();
+        System.out.println("Overall intensity for this program: " + program1.intensitylevel + " % \n");
+
         System.out.println(person2);
+        program2.overallIntensity();
+        System.out.println("Overall intensity for this program: " + program2.intensitylevel + " % \n");
+
 // Add program to Person - END
 
 /*
@@ -115,16 +127,53 @@ public class ExerciseManager {
 
         // System.out.println(p.exercises);
 
+        System.out.println(doesProgramFit(person1, program1));
+
     }
 
-    public doesProgramFit(Person, Program) {
-        if(Program.exercises.includes(Person.preferredExercises) &&
-                !(Program.intensity > Person.preferredExcercise +10) &&
-                !(Program.intensity > preferredIntensity - 10) {
-            System.out.println("Riktig");
+/*
+*     public static boolean doesProgramFit(Person person, Program program) {
+
+        if(program.exercises.contains(person.preferredExercise) &&
+                !(program.intensitylevel > (person.acceptableIntensity + 10) ) &&
+                !(program.intensitylevel > (person.acceptableIntensity - 10) ) ){
+             // System.out.println("Riktig");
+            return true;
         } else {
-            System.out.println("Feil");
+            // System.out.println("Feil");
+            return false;
         }
+
     }
+* */
+
+        // får false uansett må fikses litt på
+    public static boolean doesProgramFit(Person person, Program program) {
+        if(program.exercises.contains(person.preferredExercise)) {
+
+            if (program.intensitylevel > person.acceptableIntensity) {
+                System.out.println("Riktig");
+                return true;
+            } else if (program.intensitylevel > person.acceptableIntensity +10) {
+                System.out.println("Riktig");
+                return true;
+            } else if (program.intensitylevel > person.acceptableIntensity -10) {
+                System.out.println("Riktig");
+                return true;
+            } else {
+                System.out.println("Feil");
+                return false;
+            }
+
+        } else {
+            System.out.println("feeeeil");
+            return false;
+        }
+
+
+    }
+
+
+
 
 }
