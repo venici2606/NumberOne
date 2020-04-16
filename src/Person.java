@@ -30,7 +30,7 @@ public class Person {
     public String toString() {
         return "Preferred exercise: " + preferredExercise + '\n' +
                 "Acceptable intensity: " + acceptableIntensity + " %" + '\n' +
-                "Current program: " + currentProgram + '\n';
+                "Current program: " + currentProgram.exercises + '\n';
     }
 /*
     ArrayList<Person> personData = new ArrayList<>();
