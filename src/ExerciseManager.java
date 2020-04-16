@@ -2,7 +2,46 @@ import java.util.ArrayList;
 
 public class ExerciseManager {
 
+    private static void makeProgram( ArrayList <Exercise> exercises ){
+        Program p;
+        p= new Program();
+        p.addExercises(exercises);
+        System.out.println("Dette er et program som inneholder disse øvelsene "+ '\n' + p.exercises);
+        exercises.clear();
+    }
+
+
     public static void main(String[] args) {
+
+        ArrayList <Exercise> exercises = new ArrayList<>();
+        Exercise e;
+
+
+//program 1
+
+        e = new StrengthExercise(30, 20, 30, 40, 20, "hei");
+        exercises.add(e);
+        e = new EnduranceExercise(1, 2, 2, 2, "hei");
+        exercises.add(e);
+        e = new FlexibilityExercise(1, 2, 2, 2, "hei");
+        exercises.add(e);
+        e = new BalanceExercise(1, 2, 2, 2, "hei");
+        exercises.add(e);
+        makeProgram(exercises);
+
+//program 2
+        e = new StrengthExercise(30, 20, 30, 40, 20, "hade");
+        exercises.add(e);
+        e = new EnduranceExercise(1, 2, 2, 2, "hade");
+        exercises.add(e);
+        e = new FlexibilityExercise(1, 2, 2, 2, "hade");
+        exercises.add(e);
+        e = new BalanceExercise(1, 2, 2, 2, "hade");
+        exercises.add(e);
+        makeProgram(exercises);
+
+/*
+ public static void main(String[] args) {
 
 
         ArrayList <Exercise> exercises = new ArrayList<>();
@@ -44,7 +83,7 @@ public class ExerciseManager {
         for (Exercise plist : exercises) {
             System.out.println(plist);
         }
-         */
+
 
         System.out.println(p.isProgramBalanced());
 
@@ -57,7 +96,7 @@ public class ExerciseManager {
         System.out.println(p.calculateDuration());
 
 
-        System.out.println(e.toString()); /* skriver ut siste fra arrayet */
+        System.out.println(e.toString()); /* skriver ut siste fra arrayet
 
 // Add program to Person - START
         Exercise exercise_e1 = new EnduranceExercise(70, 30, 15, 3, "yoga");
@@ -127,11 +166,11 @@ public class ExerciseManager {
 
         // System.out.println(p.exercises);
 
-        System.out.println(doesProgramFit(person1, program1));
+      /*System.out.println(doesProgramFit(person1, program1));
 
 
     }
-
+/*
      public static boolean doesProgramFit(Person person, Program program) {
         if(program.exercises.toString().contains(person.preferredExercise) &&
                 (program.overallIntensity() <= (person.acceptableIntensity + 10) ) &&
@@ -142,7 +181,7 @@ public class ExerciseManager {
             System.out.print("Does program fit person? ");
             return false;
         }
-
+*/
     }
 
 
