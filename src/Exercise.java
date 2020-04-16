@@ -14,7 +14,7 @@ public abstract class Exercise {
 
         @Override
         public String toString() {
-            return "exercise " + '\n' +
+            return "exercise \n" +
                     "Intensity is " + intensity + "% " +'\n' +
                     "Duration is " + duration + " mins "+ '\n' +
                     repetitions + " Repetitions" +'\n' +

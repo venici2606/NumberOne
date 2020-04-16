@@ -78,7 +78,6 @@ public class ExerciseManager {
 
         Exercise exercise_e2 = new EnduranceExercise(60, 30,0,0,"cycle");
         exercises.add(exercise_e2);
-
         Exercise exercise_f2 = new FlexibilityExercise(50, 30, 12, 2, "nothing");
         exercises.add(exercise_f2);
 
@@ -86,6 +85,14 @@ public class ExerciseManager {
         program2.exercises.add(exercise_e2);
         program2.exercises.add(exercise_f2);
 
+        Exercise exercise_b3 = new BalanceExercise(50, 25, 8, 2, "yoga mat");
+        exercises.add(exercise_b3);
+        Exercise exercise_s3 = new StrengthExercise(60, 40, 12, 4, 0, "body weight");
+        exercises.add(exercise_s3);
+
+        Program program3 = new Program();
+        program3.exercises.add(exercise_b3);
+        program3.exercises.add(exercise_s3);
 
 
         // ArrayList<Person> personList = new ArrayList<>();
@@ -95,6 +102,8 @@ public class ExerciseManager {
 
         Person person2 = new Person("strength", 60, program2);
         //personList.add(person2);
+
+        Person person3 = new Person("balance", 50, program1);
 
         System.out.println(person1);
         program1.overallIntensity();
@@ -129,6 +138,11 @@ public class ExerciseManager {
 
         System.out.println(doesProgramFit(person1, program1));
 
+        System.out.println(program1.overallIntensity());
+        System.out.println(program2.overallIntensity());
+        System.out.println(program3.overallIntensity());
+
+        System.out.println(giveProgram(program1));
 
     }
 
@@ -139,11 +153,32 @@ public class ExerciseManager {
             System.out.print("Does program fit person? ");
             return true;
         } else {
-            System.out.print("Does program fit person? ");
+            //System.out.print("Does program fit person? ");
             return false;
         }
 
     }
+   /* A method for recommending, from a given collection of Programs, which is most appropriate for a given Person. */
+
+    public static String giveProgram(Program program, Person person){
+        switch (program.exercises.toString().contains(person.preferredExercise)){
+            case "endurance":
+                System.out.println(program.exercises.contains("exercise_e"));
+                break;
+            case "strength":
+                System.out.println(program.exercises.contains("exercise_s"));
+                break;
+        }
+    }
+/*
+    public void giveProgram(Program program, Person person){
+        if(program.overallIntensity() <= (person.acceptableIntensity + 10) ){
+
+        }
+
+
+    }
+ */
 
 
 }
