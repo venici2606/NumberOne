@@ -90,10 +90,10 @@ public class ExerciseManager {
 
         // ArrayList<Person> personList = new ArrayList<>();
 
-        Person person1 = new Person("kettle bell", 50, program1);
+        Person person1 = new Person("endurance", 61, program1);
         //personList.add(person1);
 
-        Person person2 = new Person("yoga", 60, program2);
+        Person person2 = new Person("strength", 60, program2);
         //personList.add(person2);
 
         System.out.println(person1);
@@ -129,51 +129,21 @@ public class ExerciseManager {
 
         System.out.println(doesProgramFit(person1, program1));
 
+
     }
 
-/*
-*     public static boolean doesProgramFit(Person person, Program program) {
-
-        if(program.exercises.contains(person.preferredExercise) &&
-                !(program.intensitylevel > (person.acceptableIntensity + 10) ) &&
-                !(program.intensitylevel > (person.acceptableIntensity - 10) ) ){
-             // System.out.println("Riktig");
+     public static boolean doesProgramFit(Person person, Program program) {
+        if(program.exercises.toString().contains(person.preferredExercise) &&
+                (program.overallIntensity() <= (person.acceptableIntensity + 10) ) &&
+                (program.overallIntensity() >= (person.acceptableIntensity - 10) ) ){
+            System.out.print("Does program fit person? ");
             return true;
         } else {
-            // System.out.println("Feil");
+            System.out.print("Does program fit person? ");
             return false;
         }
 
     }
-* */
-
-        // får false uansett må fikses litt på
-    public static boolean doesProgramFit(Person person, Program program) {
-        if(program.exercises.contains(person.preferredExercise)) {
-
-            if (program.intensitylevel > person.acceptableIntensity) {
-                System.out.println("Riktig");
-                return true;
-            } else if (program.intensitylevel > person.acceptableIntensity +10) {
-                System.out.println("Riktig");
-                return true;
-            } else if (program.intensitylevel > person.acceptableIntensity -10) {
-                System.out.println("Riktig");
-                return true;
-            } else {
-                System.out.println("Feil");
-                return false;
-            }
-
-        } else {
-            System.out.println("feeeeil");
-            return false;
-        }
-
-
-    }
-
-
 
 
 }

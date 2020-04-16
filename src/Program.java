@@ -18,13 +18,14 @@
 
 
 // 1a. Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
-        public void overallIntensity(){
+        public int overallIntensity(){
             intensitylevel = 0;
             for (Exercise e: exercises){
                 if(e.intensity >intensitylevel){
                     intensitylevel = e.intensity;
                 }
             }
+            return intensitylevel;
         }
 
 //  1b. Each program keeps account of whether or not it is balanced.
