@@ -61,21 +61,6 @@
             return  "This program takes "+totalDuration+ " minutes from start to finish";
         }
 
-        public static void makeProgram( ArrayList <Exercise> exercises){
 
-            ArrayList <Program> listOfPrograms = new ArrayList<>();
-            Program p;
-            p = new Program();
-//1. Exercises are grouped into Programs.
-            p.addExercises(exercises);
-            listOfPrograms.add(p);
-            System.out.println('\n'+ "Program: " +'\n'+
-                    p.calculateDuration() + '\n' +
-                    "Is this program balanced: " + p.isProgramBalanced() + '\n' +
-                    "This program has this level of intensity: "+  p.overallIntensity() + '\n' +
-                    "This program contains these exercises: " + '\n' + '\n' +
-                    p.exercises);
-            exercises.clear();
-        }
     }
 
