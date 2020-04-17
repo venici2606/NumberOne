@@ -195,9 +195,5 @@ public class ExerciseManager {
         } else {
             System.out.print("Does program fit person? ");
             return false;
-        }
-*/
-    }
-
-
-}
+        }*/
+}}
