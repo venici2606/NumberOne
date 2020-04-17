@@ -35,8 +35,7 @@ public class ExerciseManager {
  //makeProgram is referred to a method in Program-class, that takes the exercises we added and makes it into a program
         Program.makeProgram(exercises);
 
-<<<<<<< HEAD
-=======
+
         Program p;
         p = new Program();
 
@@ -62,7 +61,7 @@ public class ExerciseManager {
          */
 
         System.out.println(p.isProgramBalanced());
->>>>>>> master
+
 
 //1 c. Each program has the exercises sorted in order of increasing intensity.
 
@@ -71,17 +70,6 @@ public class ExerciseManager {
         /* TEST */
 
 
-        Exercise exercise_e1 = new EnduranceExercise(70, 30, 15, 3, "yoga");
-        exercises.add(exercise_e1);
-        Exercise exercise_s1 = new StrengthExercise(60, 20, 8, 3, 5, "kettle bell");
-        exercises.add(exercise_s1);
-        Exercise exercise_b1 = new BalanceExercise(40, 15, 4, 2, "yoga mat");
-        exercises.add(exercise_b1);
-        Exercise exercise_f1 = new FlexibilityExercise(50, 30, 12, 2, "nothing");
-        exercises.add(exercise_f1);
-
-<<<<<<< HEAD
-=======
 // Add program to Person - START
         Exercise exercise_e1 = new EnduranceExercise(70, 30, 15, 3, "yoga");
         exercises.add(exercise_e1);
@@ -92,14 +80,13 @@ public class ExerciseManager {
         Exercise exercise_f1 = new FlexibilityExercise(50, 30, 12, 2, "nothing");
         exercises.add(exercise_f1);
 
->>>>>>> master
+
         Program program1 = new Program();
         program1.exercises.add(exercise_e1);
         program1.exercises.add(exercise_s1);
         program1.exercises.add(exercise_b1);
         program1.exercises.add(exercise_f1);
-<<<<<<< HEAD
-=======
+
 
 
         Exercise exercise_e2 = new EnduranceExercise(60, 30,0,0,"cycle");
@@ -114,20 +101,20 @@ public class ExerciseManager {
 
 
 
-        // ArrayList<Person> personList = new ArrayList<>();
+        //ArrayList<Person> personList = new ArrayList<>();
 
-        Person person1 = new Person("endurance", 61, program1);
+
         //personList.add(person1);
->>>>>>> master
+
 
         Person person2 = new Person("strength", 60, program2);
         //personList.add(person2);
 
-<<<<<<< HEAD
-        Person person1 = new Person("endurance", 69, program1);
-        personList.add(person1);
 
-=======
+        Person person1 = new Person("endurance", 69, program1);
+       // personList.add(person1);
+
+
         System.out.println(person1);
         program1.overallIntensity();
         System.out.println("Overall intensity for this program: " + program1.intensitylevel + " % \n");
@@ -135,15 +122,14 @@ public class ExerciseManager {
         System.out.println(person2);
         program2.overallIntensity();
         System.out.println("Overall intensity for this program: " + program2.intensitylevel + " % \n");
->>>>>>> master
+
 
 // Add program to Person - END
 
-<<<<<<< HEAD
+
         /* TEST SLUTT */
 
-=======
->>>>>>> master
+
 /*
         // for-each loop to divide the array
         for (Person list : personList){
@@ -155,7 +141,7 @@ public class ExerciseManager {
  */
 
 
->>>>>>> master
+
         /*
         Person pers;
 
@@ -168,19 +154,19 @@ public class ExerciseManager {
 
         // System.out.println(p.exercises);
 
-<<<<<<< HEAD
+
         System.out.println( doesProgramFit(person1, program1));
         System.out.println(program1.overallIntensity());
         System.out.println(person1.acceptableIntensity);
       //  System.out.println(person1.preferredExercise);
-=======
+
         System.out.println(doesProgramFit(person1, program1));
->>>>>>> master
+
 
 
     }
 
-<<<<<<< HEAD
+
  /*
     //Laget en metode for å legge exercisen inn i arrayet. men det tar like lang til som å gjøre det selv.
     private static <e> void addExerciseeee( ArrayList <Exercise>  a, Exercise b) {
@@ -205,7 +191,7 @@ public class ExerciseManager {
             System.out.println("Feil");
             return false;
         }
-=======
+
      public static boolean doesProgramFit(Person person, Program program) {
         if(program.exercises.toString().contains(person.preferredExercise) &&
                 (program.overallIntensity() <= (person.acceptableIntensity + 10) ) &&
@@ -217,7 +203,7 @@ public class ExerciseManager {
             return false;
         }
 
->>>>>>> master
+
     }
 
 
