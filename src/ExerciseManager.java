@@ -1,24 +1,27 @@
-import java.util.ArrayList;
+
+
+import javax.swing.*;
+import java.time.Duration;
+import java.util.*;
 
 public class ExerciseManager {
 
     public static void main(String[] args) {
 
-
-        ArrayList <Exercise> exercises = new ArrayList<>();
+        ArrayList<Exercise> exercises = new ArrayList<>();
 
         Exercise e;
 
-        e = new EnduranceExercise(50, 30, 15,3,"your own body weight");
+        e = new EnduranceExercise(50, 30, 15, 3, "your own body weight");
         exercises.add(e);
 
-        e = new EnduranceExercise(30, 60,15,6,"yoga mat");
+        e = new EnduranceExercise(30, 60, 15, 6, "yoga mat");
         exercises.add(e);
 
-        e = new EnduranceExercise(70, 15,15,6,"running shoes");
+        e = new EnduranceExercise(70, 15, 15, 6, "running shoes");
         exercises.add(e);
 
-        e = new StrengthExercise(20,1,3,2,4,"kettle bells");
+        e = new StrengthExercise(20, 1, 3, 2, 4, "kettle bells");
         exercises.add(e);
 
 
@@ -39,17 +42,16 @@ public class ExerciseManager {
 //     A balanced program has at least one exercise of each type.
         System.out.println(p.exercises);
 
-        /* Her vil vi få en oversikt som ved personList
+        //Her vil vi få en oversikt som ved personList
 
         for (Exercise plist : exercises) {
             System.out.println(plist);
         }
-         */
+
 
         System.out.println(p.isProgramBalanced());
 
 //1 c. Each program has the exercises sorted in order of increasing intensity.
-
 
 
 //1 d. Overall duration for the programs are set.
@@ -59,11 +61,12 @@ public class ExerciseManager {
 
         System.out.println(e.toString()); /* skriver ut siste fra arrayet */
 
+
         /* TEST */
         Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
         Program program1 = new Program();
 
-        Exercise exercise_s = new EnduranceExercise(70, 15,15,6,"running shoes");
+        Exercise exercise_s = new EnduranceExercise(70, 15, 15, 6, "running shoes");
         Program program2 = new Program();
 
         ArrayList<Person> personList = new ArrayList<>();
@@ -75,11 +78,106 @@ public class ExerciseManager {
         personList.add(person2);
         /* TEST SLUTT */
 
-
         // for-each loop to divide the array
-        for (Person list : personList){
+        for (Person list : personList) {
             System.out.println(list);
         }
+
+
+
+//3c
+        class Program {
+
+            Integer intensity;
+
+            Program(Integer intensity) {
+                this.intensity = intensity;
+            }
+
+            public void printIntensity() {
+                System.out.println(this.intensity);
+            }
+
+        }
+
+        class Person {
+
+            Integer intensity;
+
+            Person(Integer intensity) {
+                this.intensity = intensity;
+            }
+
+        }
+
+
+         class Exercise{
+
+            public ArrayList<Program> filterPrograms(ArrayList<Program> filterList, Integer intensity) {
+
+
+                ArrayList<Program> filteredList = new ArrayList<Program>();
+
+                for(Program program : filterList) {
+
+
+                    if(program.intensity <= (intensity+10) && program.intensity >= intensity-10 ) {
+                        filteredList.add(program);
+
+                    }
+                }
+
+                return filteredList;
+            }
+
+            public void Recommendation() {
+                Person person1 = new Person(20);
+
+                ArrayList<Program> programs = new ArrayList<Program>();
+
+                Program prog1 = new Program(30);
+                Program prog2 = new Program(10);
+                Program prog3 = new Program(5);
+
+                programs.add(prog1);
+                programs.add(prog2);
+                programs.add(prog3);
+
+                ArrayList<Program> recomendations = filterPrograms(programs, person1.intensity);
+
+                System.out.println("Recomended programs");
+
+                for(Program program : recomendations) {
+
+                    System.out.println(program.intensity);
+                } } } } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         /*
@@ -90,11 +188,12 @@ public class ExerciseManager {
         pers = new Person("running", 70);
 
         System.out.println(pers.toString());
-        */
-
-        // System.out.println(p.exercises);
-
-    }
 
 
-}
+        // System.out.println(p.exercises); */
+
+
+        //3c
+
+
+
