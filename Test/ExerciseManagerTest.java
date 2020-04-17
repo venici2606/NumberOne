@@ -1,5 +1,9 @@
-<<<<<<< HEAD
+
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.ArrayList;
+import static org.junit.Assert.assertTrue;
 
 public class ExerciseManagerTest {
 
@@ -13,11 +17,6 @@ public class ExerciseManagerTest {
     void main() {
     }
 
-=======
-import java.util.ArrayList;
-import static org.junit.Assert.assertTrue;
-
-public class ExerciseManagerTest {
 
     @org.junit.Test
     public void testDoesProgramFit(){
@@ -58,6 +57,6 @@ public class ExerciseManagerTest {
         }
 
     }
->>>>>>> master
+
 
 }
