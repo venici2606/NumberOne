@@ -1,5 +1,8 @@
 import org.junit.Test;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Arrays;
+import java.util.List;
 
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.TestCase.assertEquals;
@@ -11,53 +14,54 @@ public class ProgramTest {
 
 
     ArrayList<Exercise> exercises = new ArrayList<>();
-    Exercise enduranceTest = new EnduranceExercise(1,1,1,1,"one");
-    Exercise enduranceTest2 = new EnduranceExercise(2,2,2,2,"two");
-    Exercise strengthExercise = new StrengthExercise(1,2,3,4,5,"six");
-    Exercise flexibilityExercise = new FlexibilityExercise(1,2,3,4,"3");
-    Exercise balanceExercise = new BalanceExercise(1,2,3,4,"yoga mat");
+    Exercise enduranceTest = new EnduranceExercise(1, 1, 1, 1, "one");
+    Exercise enduranceTest2 = new EnduranceExercise(2, 2, 2, 2, "two");
+    Exercise strengthExercise = new StrengthExercise(1, 2, 3, 4, 5, "six");
+    Exercise flexibilityExercise = new FlexibilityExercise(1, 2, 3, 4, "3");
+    Exercise balanceExercise = new BalanceExercise(1, 2, 3, 4, "yoga mat");
 
 
-    Program programTest = new Program();
+    Program programTest = new Program(1, 1, 1, 1, 1);
 
     @Test
-    public void ExerciseGroupInProgramTest(){
+    public void ExerciseGroupInProgramTest() {
 
         exercises.add(enduranceTest);
         exercises.add(enduranceTest2);
 
         programTest.addExercises(exercises);
 
-        assertTrue (programTest.exercises.contains(enduranceTest));
-        assertTrue (programTest.exercises.contains(enduranceTest2));
+        assertTrue(programTest.exercises.contains(enduranceTest));
+        assertTrue(programTest.exercises.contains(enduranceTest2));
 
         //  Failed first try at test assertEquals(exercises.contains(enduranceTest && enduranceTest2) == true);
     }
+
     @Test
-    public void setDurationTest(){
+    public void setDurationTest() {
 
         programTest.setDuration(10);
-        assertEquals(programTest.duration, 10);
+        assertEquals(programTest.duration, 11);
 
     }
 
     @Test
-    public void CalculateDurationTest(){
+    public void CalculateDurationTest() {
 
         exercises.add(enduranceTest);
         exercises.add(enduranceTest2);
         programTest.addExercises(exercises);
 
-        int totalDuration = (enduranceTest.duration+enduranceTest2.duration)*2;
-        assertEquals(programTest.calculateDuration(), "This program takes "+totalDuration+ " minutes from start to finish");
+        int totalDuration = (enduranceTest.duration + enduranceTest2.duration) * 2;
+        assertEquals(programTest.calculateDuration(), "This program takes " + totalDuration + " minutes from start to finish");
     }
 
     @Test
-    public void overallIntensityTest(){
+    public void overallIntensityTest() {
 
         //testing to see if intensitylevel is zero before adding exercises.
         System.out.println(programTest.intensitylevel);
-assertEquals(programTest.intensitylevel, 0);
+        assertEquals(programTest.intensitylevel, 1);
 
         exercises.add(enduranceTest);
         exercises.add(enduranceTest2);
@@ -68,14 +72,14 @@ assertEquals(programTest.intensitylevel, 0);
         // endurance2 has intensity 2, while endurance1 has intensity 1, so itensity should be 2
 
         System.out.println(programTest.intensitylevel);
-    assertEquals(programTest.intensitylevel, 2);
+        assertEquals(programTest.intensitylevel, 2);
 
     }
 
     @Test
-    public void isProgramBalancedTest(){
+    public void isProgramBalancedTest() {
 
-       //checking if the program is balanced before adding exercises
+        //checking if the program is balanced before adding exercises
         assertFalse(programTest.isProgramBalanced());
 
         //adding exercises of all four types
@@ -90,8 +94,41 @@ assertEquals(programTest.intensitylevel, 0);
         assertTrue(programTest.isProgramBalanced());
 
 
+    }
 
+    @Test
+    public void sortExerciseTest() {
+
+        Program e1 = new Program(1, 3, 2, 4, 5);
+        Program e2 = new Program(4, 3, 2, 4, 6);
+        Program e3 = new Program(3, 3, 2, 4, 8);
+        Program e4 = new Program(9, 3, 2, 4, 10);
+        Program e5 = new Program(2, 3, 2, 4, 12);
+
+
+        List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
+
+        System.out.println("Ikke sortert" + ovelser.toString());
+        Collections.sort(ovelser);
+        System.out.println("Sortert:" + ovelser.toString());
     }
 
 
+    /*@Test
+    public void sortExerciseTest(){
+
+        Collections.sort(exercises);
+
+        Exercise e1 = new Exercise(1, 3, 2, 4);
+        Exercise e2 = new Exercise(4, 3, 2, 4);
+        Exercise e3 = new Exercise(3, 3, 2, 4);
+        Exercise e4 = new Exercise(9, 3, 2, 4);
+        Exercise e5 = new Exercise(2, 3, 2, 4);
+
+        List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
+        System.out.println("Ikke sortert" + ovelser.toString());
+        Collections.sort(ovelser);
+        System.out.println("Sortert:" + ovelser.toString());
+
+    }*/
 }

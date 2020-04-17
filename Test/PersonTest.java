@@ -5,7 +5,7 @@ public class PersonTest {
     @org.junit.Test
     public void testPerson() {
         Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
-        Program program1 = new Program();
+        Program program1 = new Program(1,1,1,1,1);
 
         Person personTest1 = new Person("yoga", 60, program1);
         assertTrue(personTest1.preferredExercise == "yoga");
@@ -39,7 +39,7 @@ public class PersonTest {
     @org.junit.Test
     public void testToString() {
         Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
-        Program program1 = new Program();
+        Program program1 = new Program(1,1,1,1,1);
 
         Person personTest1  = new Person("yoga", 60, program1);
         equals(personTest1.toString().contains("yoga"));
