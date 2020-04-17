@@ -191,7 +191,7 @@ public class ExerciseManager {
             System.out.println("Feil");
             return false;
         }
-
+/*
      public static boolean doesProgramFit(Person person, Program program) {
         if(program.exercises.toString().contains(person.preferredExercise) &&
                 (program.overallIntensity() <= (person.acceptableIntensity + 10) ) &&
@@ -203,7 +203,7 @@ public class ExerciseManager {
             return false;
         }
 
-
+*/
     }
 
 
