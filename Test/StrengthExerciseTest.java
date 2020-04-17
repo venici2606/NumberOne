@@ -5,6 +5,7 @@ public class StrengthExerciseTest {
     @Test
     public void strengthClassTest(){
         Exercise StrengthExerciseTest  = new StrengthExercise(1, 2, 3, 4,20,  "Dumbell");
+
         assertTrue(StrengthExerciseTest.intensity ==1);
         System.out.println("Testing for correct intensity ");
         assertTrue(StrengthExerciseTest.duration ==2);
@@ -15,7 +16,7 @@ public class StrengthExerciseTest {
         System.out.println("Testing for correct sets ");
         assertTrue(((StrengthExercise) StrengthExerciseTest).weights ==20);
         System.out.println("testing for correct weight");
-        assertTrue(StrengthExerciseTest.toString().contains("D"));
+        assertTrue(((StrengthExercise) StrengthExerciseTest).equipment.contains("D"));
         System.out.println("Testing for correct equipment ");
     }
     @Test
