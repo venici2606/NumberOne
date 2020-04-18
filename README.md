@@ -25,6 +25,7 @@
 * This is an Exam Assignment and we were 6 persons collaborating on this Exam.
 * The program is Java based.
 * The program demonstrates system managing of different exercises of different types. The exercise types that have been used in this project are: Strength,Endurance, Flexibility and Balance.
+* Our program enables people to feel a sense of belonging to a community of "home gym", and making people do the exercises that they believe are best for their health/body.
 * The system have the ability to give the person a pre-made program as well as the person can tailor their own.Each program has an overall duration and the sum of all the exercises is equal to the software duration divided in two.
 * The program is accompanied by a couple of Unit Tests, Integration Tests, SUT-System under Test and Acceptance Test, to check that the main program works as expected. 
 
@@ -39,15 +40,21 @@
 
 <a name="install"></a>
 ####3.Installation 
-<ins>To compile and run this project, first you need to install it from Github</ins>,
+First of all, the JDK should be installed in your system. 
+Then,<ins>to compile and run this project, first you need to clone/download it from Github</ins>,
  you can either <ins>*clone*</ins> this repo to your local machine using [Github](https://github.com/venici2606/NumberOne)<br/> and clone it into a folder; or you can
 <ins>*download*</ins> the whole project as a zip file and then unpack the file.
+![alternativetext](examprogramvaretesting/scInstall.jpg)
+
 
 NOTE: The program is tested both on Mac OSX and Windows.
 
 <a name="rac"></a>
 ####4.Run and Compile 
-Once the program is installed, open the Command Prompt(terminal on Mac), and use the CD command to go to bin folder of installation directory.Then trigger javac(used to compile any java files) command, and add .java extension to the file name.The syntax of our program is checked, and  program doesn't contain any compile time errors,so the compilation should be successful and will not throw any exception. If it says that the program is not recognized, that means that java haven't been installed, or it is not proper. If that happens, reinstall the program, and then run the command "dir".
+Once the program is installed,and the file is unpacked; open the project in Intellij. Intellij uses a compiler that works according to Java specification.
+
+
+open the Command Prompt(terminal on Mac), and use the CD command to go to  folder of installation/downloading directory.
 
 
 <a name="desc"></a>
@@ -109,7 +116,7 @@ her skal vi ha badge
 
 <a name="usage"></a>
 ####8.Usage
--   
+ 
 
 
 <a name="tests"></a>
