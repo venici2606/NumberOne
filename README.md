@@ -47,7 +47,7 @@ First of all, the JDK should be installed in your system.
 Then,<ins>to compile and run this project, first you need to clone/download it from Github</ins>,
  you can either <ins>*clone*</ins> this repo to your local machine using [Github](https://github.com/venici2606/NumberOne)<br/> and clone it into a folder; or you can
 <ins>*download*</ins> the whole project as a zip file and then unpack the file.
-![alternativetext] ![alt text](examprogramvaretesting/scInstall.jpg)
+![Image description](examprogramvaretesting/numberOne/scInstall.jpg)
 
 
 NOTE: The program is tested both on Mac OSX and Windows.
