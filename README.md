@@ -1,9 +1,9 @@
 # NumberOne
-#####Introduction to Software Testing
+Introduction to Software Testing
 
 
 
-##Table of contents
+Table of contents
 
 
 1. [About. ](#about)
@@ -21,7 +21,8 @@
 
 
 <a name="about"></a>
-####1.About
+**About**
+
 * This is an Exam Assignment and we were 6 persons collaborating on this Exam.
 * The program is Java based.
 * The program demonstrates system managing of different exercises of different types. The exercise types that have been used in this project are: Strength,Endurance, Flexibility and Balance.
@@ -30,7 +31,7 @@
 * The program is accompanied by a couple of Unit Tests, Integration Tests, SUT-System under Test and Acceptance Test, to check that the main program works as expected. 
 
 <a name="requirements"></a>
-####2.Requirements
+**Requirements**
 * JAVA JDK(8+)
 * Intellij IDEA(recommended) or Eclipse
 * GIT
@@ -39,7 +40,7 @@
 
 
 <a name="install"></a>
-####3.Installation 
+**Installation**
 First of all, the JDK should be installed in your system. 
 Then,<ins>to compile and run this project, first you need to clone/download it from Github</ins>,
  you can either <ins>*clone*</ins> this repo to your local machine using [Github](https://github.com/venici2606/NumberOne)<br/> and clone it into a folder; or you can
@@ -50,7 +51,7 @@ Then,<ins>to compile and run this project, first you need to clone/download it f
 NOTE: The program is tested both on Mac OSX and Windows.
 
 <a name="rac"></a>
-####4.Run and Compile 
+**Run and Compile**
 Once the program is installed,and the file is unpacked; open the project in Intellij. Intellij uses a compiler that works according to Java specification.
 
 
@@ -58,7 +59,7 @@ open the Command Prompt(terminal on Mac), and use the CD command to go to  folde
 
 
 <a name="desc"></a>
-####4.Class description
+ #### Class description
 
 * **Exercise** <br/>
   - Creating method for Exercise, using String toString Method. The method is overriding the parent class (@**Override**)
