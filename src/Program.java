@@ -1,23 +1,28 @@
-
     import java.util.ArrayList;
     import java.util.Collections;
     import java.util.Arrays;
     import java.util.List;
 
-    public class Program {
+    public class Program extends Exercise{
         int duration;
         int intensitylevel;
+
+        /* Dette er constructor for Program classen, siden abstract class ikke kan bli initialized må vi ha en constructor i en subclass(Program)
+        for å hente ut variabler fra abstractg classen ved bruk av super. Dermed kan man initialize sublclassen(Program) istedet
+        */
+        public Program(int intensity, int duration, int repetitions, int sets, int intensitylevel){
+            super(intensity,duration,repetitions,sets);
+            this.intensitylevel = intensitylevel;
+        }
 
 //1 Exercises are grouped into Programs.
         ArrayList<Exercise> exercises = new ArrayList<>();
 
         public void addExercises(ArrayList<Exercise> exercises) {
-            this.exercises = exercises;
-        }
+            this.exercises = exercises;}
 
         public void setDuration(int duration) {
-            this.duration += duration;
-        }
+            this.duration += duration;}
 
 
 // 1a. Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
@@ -25,10 +30,8 @@
             intensitylevel = 0;
             for (Exercise e: exercises){
                 if(e.intensity >intensitylevel){
-                    intensitylevel = e.intensity;
-                }
-            }
-        }
+                    intensitylevel = e.intensity; }
+            } }
 
 //  1b. Each program keeps account of whether or not it is balanced.
 //  A balanced program has at least one exercise of each type.
@@ -51,18 +54,13 @@
         }
 
 // 1c. Each program has the exercises sorted in order of increasing intensity.
-    public void  sortExercise(){
-    Collections.sort(exercises);
-}
-
-        public static void main(String[] args) {
-
+        public  static void main(String[] args){
 
             List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList());
+
             System.out.println("Ikke sortert" + ovelser.toString());
             Collections.sort(ovelser);
-            System.out.println("Sortert:"+ovelser.toString());
-        }
+            System.out.println("Sortert:"+ovelser.toString());}
 
 // 1d. Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
 // durations of all the exercises it includes (to account for rest).*/

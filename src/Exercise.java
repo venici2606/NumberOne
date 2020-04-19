@@ -1,4 +1,4 @@
-public class Exercise implements Comparable<Exercise> {
+public abstract class Exercise implements Comparable<Exercise> {
         int intensity;
         int duration;
         int repetitions;
@@ -20,13 +20,15 @@ public class Exercise implements Comparable<Exercise> {
                     repetitions + " Repetitions" +'\n' +
                     sets + " Sets " +'\n'+'\n';
         }
-    public int getIntensity(){
-        return intensity;
-    }
-    @Override
-    public int compareTo(Exercise o) {
-        return this.getIntensity()-o.getIntensity();
-    }
-    }
+
+        public int getIntensity(){
+
+            return intensity;
+        }
+        @Override
+        public int compareTo(Exercise o) {
+            return this.getIntensity()-o.getIntensity();
+        }
+        }
 
 

@@ -21,9 +21,9 @@ public class ExerciseManager {
         e = new StrengthExercise(20,1,3,2,4,"kettle bells");
         exercises.add(e);
 
-
+// Trenger random input for å teste - Bilal
         Program p;
-        p = new Program();
+        p = new Program(1,1,1,1,1);
 
 
 //1. Exercises are grouped into Programs.
@@ -61,10 +61,10 @@ public class ExerciseManager {
 
         /* TEST */
         Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
-        Program program1 = new Program();
+        Program program1 = new Program(1,1,1,1,1);
 
         Exercise exercise_s = new EnduranceExercise(70, 15,15,6,"running shoes");
-        Program program2 = new Program();
+        Program program2 = new Program(1,1,1,1,1);
 
         ArrayList<Person> personList = new ArrayList<>();
 

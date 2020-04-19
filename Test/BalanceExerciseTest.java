@@ -20,8 +20,9 @@ public class BalanceExerciseTest {
 
 
                 //  Laget en forkortelse for Program for så å lage programmene
+                // Trenger random input for å teste - Bilal
                 Program p;
-                p = new Program();
+                p = new Program(1,1,1,1,1);
 
                 //  Her hentes exercisene ut fra arrayet over for så å bli skrevet ut.
                 p.addExercises(exercises);
