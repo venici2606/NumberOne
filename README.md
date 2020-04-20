@@ -128,8 +128,7 @@ Select the root directory, and module from where picking up the classpath. Or to
 * Test Coverage is important is an important technique in Software Testing, 
 which determines whether our test cases are actually covering the application code, 
 and how much code is exercised when we run those test cases. 
-! [] (examprogramvaretesting/bilder/ScInstall.jpg)
-
+! [] (ScCodeCoverage.jpg)
 
 
 The code shows the percentage of the code that has been covered by tests. So, you can see the coverage result for our classess, methods and lines. 
