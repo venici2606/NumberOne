@@ -48,7 +48,7 @@ First of all, the JDK should be installed in your system.
 Then,<ins>to compile and run this project, first you need to clone/download it from Github</ins>,
  you can either <ins>*clone*</ins> this repo to your local machine using [Github](https://github.com/venici2606/NumberOne)<br/> and clone it into a folder; or you can
 <ins>*download*</ins> the whole project as a zip file and then unpack the file. You can also clone and install our program by using SSH instead of https. 
-All you have to do is to go to  [Github](https://github.com/venici2606/NumberOne), <br/> clone/download and change to SSH. ![](images/cloneSC.png)
+All you have to do is to go to  [Github](https://github.com/venici2606/NumberOne), <br/> clone/download and change to SSH.
 Then open Intellij and select **"Check out from Version Control**, and select **GIT**. Once **Git** is selected, paste the Git repository URL, and select the directory where you want to clone it into.
 It will ask you if you want to connect to Github, and you click yes. Now, intelliJ will tell you that there is an Unlinked project,so click on import Gradle project;use the auto-import and unselect the "create Separate module per source set"-then ok.
 The next step is to right-click the project,and open Module settings,select SDK's, and there you have to select the JDK that is installed on your system and click ok; and the project is installed and ready to run.
