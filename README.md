@@ -55,7 +55,6 @@ It will ask you if you want to connect to Github, and you click yes. Now, intell
 The next step is to right-click the project,and open Module settings,select SDK's, and there you have to select the JDK that is installed on your system and click ok; and the project is installed and ready to run.
 
 
-
 NOTE: The program is tested both on Mac OSX and Windows.
 
 
@@ -78,7 +77,7 @@ Select the root directory, and module from where picking up the classpath. Or to
 
 <a name="desc"></a>
 ## Class description
-
+![](images/systemDesignSc.png)
 * **Exercise** <br/>
   - Creating method for Exercise, using String toString Method. The method is overriding the parent class (@**Override**)
 
@@ -132,13 +131,23 @@ Select the root directory, and module from where picking up the classpath. Or to
 * The code shows the percentage of the code that has been covered by tests.
 * We decided to only test the functions of the task,ie. methods, line of codes and the program we created, following the criteria we have been assigned.So, there is no stress testing,
 performance testing or backend testing. Here you can see the coverage result for our Classes, methods and lines. 
-(Screenshot kommer her)
+![](images/coverageSc.png)
+(Vi får ta en annen sc når koden er ferdig, bildet er her bare for å teste om det går ann å sette bilder.)
+According to the criteria, the percentage of test coverage, have to be at least 50%. Considering that, we strove to deliver a complete product without any bugs and faults in 
+production; So, our test criteria is based on creating multiple tests, with a code coverage of 100%.
+
 +her skal vi ha badge og- som viser at testene er passed). 
 
 
 <a name="usage"></a>
 ## Usage
-The possibility to be awarded a pre-made program or tailor their own.(Skal utfylles når vi er ferdig med kodinga.)
+Our vision is to create a system that will manage different exercise programs for a home workout,based on different exercises,equipment, intensity level and duration; as well as the users have the possibility to be awarded a pre-made program or tailor their own program.
+An exercise program that is tailored specifically to your preference,is a great way to stay fit.
+The main functionality of this project is to generate exercises according to user's preference.
+Our system is effective and easy to use.Then only thing you need to do, is to "Run" the ExerciseManager class.
+ExerciseManager is the class that includes most of the methods, and connects the classes together.
+So,while running the ExerciseManager, 
+every input value of the other classes will be added, and you will be able to see the output of the system. 
 
 
 
@@ -151,7 +160,7 @@ The quality of the production code depends on the tests and this project provide
 <ins> **Acceptance Test**</ins>- A test that examines whether the software meets the user needs,requirements, and criteria we have been given.<br/>
 <br/>
 The framework that have been used for these tests is JUnit, which enables to write repeatable tests that can be incorporated into a continuous Integration workflow.
-
+(når vi er helt ferdig med koden, så skal vi ha en gif her, som viser de forskjellige testene)
 
 **NOTE**: it is important for the test class to have the following parts: 
 - [x] imports
