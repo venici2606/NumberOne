@@ -66,7 +66,7 @@ IntelliJ uses a compiler that works according to Java specification.
 To compile the program you can use the keyboard shortcuts <ins>Shift + Ctrl + F9</ins> at the same time, or you can go in <ins>Settings/Preference dialog,</ins> then  **Build-Execution-Deployment-Compiler**.
 On the Compiler page, select Build project automatically.
 
- ![](images/run.gif)
+ ![](images/compilerSc.gif)
  
 In case you don't want to compile the full project, you can compile some of the classes, by right-clicking on the class that you want to compile, and from the context menu, select <ins> "Recompile", "class name".</ins>
 To run the project you can use the keyboard shortcut **SHIFT +F10**, or click on **"Run"** from main toolbar(-the green triangle).
