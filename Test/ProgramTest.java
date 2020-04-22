@@ -4,11 +4,10 @@ import java.util.Collections;
 import java.util.Arrays;
 import java.util.List;
 
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
 
 public class ProgramTest {
+
+    //TODO clean up
     int duration;
     int intensitylevel;
 
@@ -21,7 +20,7 @@ public class ProgramTest {
     Exercise balanceExercise = new BalanceExercise(1,2,3,4,"yoga mat");
 
 
-    Program programTest = new Program(0,0,0,0,0);
+  /* Program programTest = new Program(0,0,0,0,0);
 
 
 
@@ -95,7 +94,7 @@ assertEquals(programTest.intensitylevel, 0);
         assertTrue(programTest.isProgramBalanced());
 
     }
-
+*/
     @Test
     public void sortExerciseTest(){
 

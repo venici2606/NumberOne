@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class FlexibilityExerciseTest {
     @org.junit.jupiter.api.Test
     void testToString() {
+        //TODO clean up
 
         // Lager ArrayList for programmene
         ArrayList<Exercise> exercises = new ArrayList<>();
@@ -22,7 +23,7 @@ public class FlexibilityExerciseTest {
         //  Laget en forkortelse for Program for så å lage programmene
         // Trenger random input for å teste - Bilal
         Program p;
-        p = new Program(1,1,1,1,1);
+        p = new Program();
 
         //  Her hentes exercisene ut fra arrayet over for så å bli skrevet ut.
         p.addExercises(exercises);

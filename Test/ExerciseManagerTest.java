@@ -7,6 +7,8 @@ import static org.junit.Assert.assertTrue;
 
 public class ExerciseManagerTest {
 
+    //tODO clean up
+
 
     @org.junit.jupiter.api.Test
     void doesProgramFit() {
