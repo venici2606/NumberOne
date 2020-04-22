@@ -142,7 +142,6 @@ public class ExerciseManager {
         System.out.println(program2.overallIntensity());
         System.out.println(program3.overallIntensity());
 
-        System.out.println(giveProgram(program1));
 
     }
 
@@ -158,27 +157,7 @@ public class ExerciseManager {
         }
 
     }
-   /* A method for recommending, from a given collection of Programs, which is most appropriate for a given Person. */
 
-    public static String giveProgram(Program program, Person person){
-        switch (program.exercises.toString().contains(person.preferredExercise)){
-            case "endurance":
-                System.out.println(program.exercises.contains("exercise_e"));
-                break;
-            case "strength":
-                System.out.println(program.exercises.contains("exercise_s"));
-                break;
-        }
-    }
-/*
-    public void giveProgram(Program program, Person person){
-        if(program.overallIntensity() <= (person.acceptableIntensity + 10) ){
-
-        }
-
-
-    }
- */
 
 
 }
