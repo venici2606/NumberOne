@@ -58,6 +58,8 @@
             return  "This program takes "+totalDuration+ " minutes from start to finish";
         }
 
+
+       //TODO add sort exercise test her.
         //   Method for building new Programs
         public void makeProgram(ArrayList<Exercise> exercises, Program p){
             // Exercises are grouped into Programs.
