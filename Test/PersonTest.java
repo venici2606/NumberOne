@@ -1,6 +1,7 @@
 import static org.junit.Assert.assertTrue;
 
 public class PersonTest {
+
     @org.junit.Test
     public void testPerson() {
         Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
@@ -18,6 +19,7 @@ public class PersonTest {
 
     }
 
+
     @org.junit.Test
     public void testToString() {
         Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
@@ -29,5 +31,4 @@ public class PersonTest {
         equals(personTest1.toString().contains("program1"));
         System.out.println("Testing for Check of String");
     }
-
 }
