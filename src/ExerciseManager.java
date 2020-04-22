@@ -1,75 +1,16 @@
 import java.util.ArrayList;
 
 public class ExerciseManager {
-
     public static void main(String[] args) {
 
+        ArrayList <Exercise> exercises1 = new ArrayList<>();
+        ArrayList <Exercise> exercises2 = new ArrayList<>();
+        ArrayList <Exercise> exercises3 = new ArrayList<>();
+        ArrayList <Exercise> exercises4 = new ArrayList<>();
 
-        ArrayList <Exercise> exercises = new ArrayList<>();
-
-        Exercise e;
-
-        e = new EnduranceExercise(50, 30, 15,3,"your own body weight");
-        exercises.add(e);
-
-        e = new EnduranceExercise(30, 60,15,6,"yoga mat");
-        exercises.add(e);
-
-        e = new EnduranceExercise(70, 15,15,6,"running shoes");
-        exercises.add(e);
-
-        e = new StrengthExercise(20,1,3,2,4,"kettle bells");
-        exercises.add(e);
-
-
-        Program p;
-        p = new Program();
-
-
-//1. Exercises are grouped into Programs.
-        p.addExercises(exercises);
-
-// 1 a. Each program keeps an account of the overall intensity
-        // (the highest intensity among the included exercises).
-
-        p.overallIntensity();
-        System.out.println(p.intensitylevel + " % is the overall intensity for this program" + '\n');
-
-// 1 b. Each program keeps account of whether or not it is balanced.
-//     A balanced program has at least one exercise of each type.
-        System.out.println(p.exercises);
-
-        /* Her vil vi få en oversikt som ved personList
-
-        for (Exercise plist : exercises) {
-            System.out.println(plist);
-        }
-         */
-
-        System.out.println(p.isProgramBalanced());
-
-//1 c. Each program has the exercises sorted in order of increasing intensity.
-
-
-
-//1 d. Overall duration for the programs are set.
-        p.setDuration(e.duration);
-        System.out.println(p.calculateDuration());
-
-
-        System.out.println(e.toString()); /* skriver ut siste fra arrayet */
-
-// Add program to Person - START
-        Exercise exercise_e1 = new EnduranceExercise(70, 30, 15, 3, "yoga");
-        exercises.add(exercise_e1);
-        Exercise exercise_s1 = new StrengthExercise(60, 20, 8, 3, 5, "kettle bell");
-        exercises.add(exercise_s1);
-        Exercise exercise_b1 = new BalanceExercise(40, 15, 4, 2, "yoga mat");
-        exercises.add(exercise_b1);
-        Exercise exercise_f1 = new FlexibilityExercise(50, 30, 12, 2, "nothing");
-        exercises.add(exercise_f1);
-
+        Program p = new Program();
         Program program1 = new Program();
+<<<<<<< HEAD
         program1.exercises.add(exercise_e1);
         program1.exercises.add(exercise_s1);
         program1.exercises.add(exercise_b1);
@@ -160,4 +101,45 @@ public class ExerciseManager {
 
 
 
+=======
+        Program program2 = new Program();
+        Program program3 = new Program();
+        Program program4 = new Program();
+
+//Creating exercises to add to a program
+        exercises1.add(new StrengthExercise(70, 20, 10, 3, 20, "Dumbbells"));
+        exercises1.add(new EnduranceExercise(50, 30, 4, 1, "Stop watch"));
+        exercises1.add(new FlexibilityExercise(40, 10, 1, 1, "A yoga mat"));
+        exercises1.add(new BalanceExercise(40, 15, 3, 2, "A Balance ball"));
+//makeProgram is referred to a method in Program-class, that takes the exercises we added and makes it into a program
+        p.makeProgram(exercises1, program1);
+
+        exercises2.add(new StrengthExercise(75, 20, 12,4 , 0, "Your hands"));
+        exercises2.add(new FlexibilityExercise(25, 10, 2, 2, "A yoga mat and being able to sit in a lotus position"));
+        exercises2.add(new BalanceExercise(15, 5, 15, 2, "A tree"));
+        exercises2.add(new BalanceExercise(20, 5, 15, 2, "A climbing wall"));
+        p.makeProgram(exercises2, program2);
+
+//Creating exercises to add to another program
+        exercises3.add(new StrengthExercise(50, 20, 12,4 , 8, "Kettle bells"));
+        exercises3.add(new EnduranceExercise(40, 60, 1, 1, "Long distance running shoes"));
+        exercises3.add(new FlexibilityExercise(30, 6, 6, 5, "Needs to be able to do a split"));
+        exercises3.add(new FlexibilityExercise(15, 15, 1, 1, "No requirements"));
+        exercises3.add(new BalanceExercise(45, 8, 20, 2, "Bosu ball"));
+        p.makeProgram(exercises3, program3);
+
+        exercises4.add(new FlexibilityExercise(50,30,5,6,"Needs to know basic yoga"));
+        p.makeProgram(exercises4, program4);
+
+        Person person1 = new Person("endurance", 55, p);
+        Person person2 = new Person("strength", 80, p);
+        Person person3 = new Person("balance",50 , p);
+
+        System.out.println( p.giveProgram(person1));
+        System.out.println( p.giveProgram(person2));
+        System.out.println( p.giveProgram(person3));
+
+    }
+>>>>>>> e2bab19da92a665d6ce53dd2ab81cf7aeb7ad930
 }
+
