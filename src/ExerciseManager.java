@@ -35,9 +35,9 @@ public class ExerciseManager {
  //makeProgram is referred to a method in Program-class, that takes the exercises we added and makes it into a program
         Program.makeProgram(exercises);
 
-
+// Trenger random input for å teste - Bilal
         Program p;
-        p = new Program();
+        p = new Program(1,1,1,1,1);
 
 
 //1. Exercises are grouped into Programs.
@@ -81,6 +81,14 @@ public class ExerciseManager {
         exercises.add(exercise_f1);
 
 
+<<<<<<< HEAD
+        /* TEST */
+        Exercise exercise_e = new EnduranceExercise(50, 30, 15, 3, "yoga");
+        Program program1 = new Program(1,1,1,1,1);
+
+        Exercise exercise_s = new EnduranceExercise(70, 15,15,6,"running shoes");
+        Program program2 = new Program(1,1,1,1,1);
+=======
         Program program1 = new Program();
         program1.exercises.add(exercise_e1);
         program1.exercises.add(exercise_s1);
@@ -109,6 +117,7 @@ public class ExerciseManager {
 
         Person person2 = new Person("strength", 60, program2);
         //personList.add(person2);
+>>>>>>> 85942cd08bbcfa0f734c069d19f0351c52058cf5
 
 
         Person person1 = new Person("endurance", 69, program1);

@@ -1,5 +1,8 @@
 import org.junit.Test;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Arrays;
+import java.util.List;
 
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.TestCase.assertEquals;
@@ -18,7 +21,9 @@ public class ProgramTest {
     Exercise balanceExercise = new BalanceExercise(1,2,3,4,"yoga mat");
 
 
-    Program programTest = new Program();
+    Program programTest = new Program(0,0,0,0,0);
+
+
 
     @Test
     public void ExerciseGroupInProgramTest(){
@@ -89,9 +94,40 @@ assertEquals(programTest.intensitylevel, 0);
         programTest.addExercises(exercises);
         assertTrue(programTest.isProgramBalanced());
 
-
-
     }
+
+    @Test
+    public void sortExerciseTest(){
+
+        Exercise e1 = new BalanceExercise(1,3,2,4,"5");
+        Exercise e2 = new BalanceExercise(4,3,2,4,"5");
+        Exercise e3 = new BalanceExercise(9,3,2,4,"5");
+        Exercise e4 = new BalanceExercise(3,3,2,4,"5");
+        Exercise e5 = new BalanceExercise(2,3,2,4,"5");
+
+        List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
+
+        System.out.println("Ikke sortert" + ovelser.toString());
+        Collections.sort(ovelser);
+        System.out.println("Sortert:" + ovelser.toString());
+    }
+    /*@Test
+    public void sortExerciseTest(){
+
+        Collections.sort(exercises);
+
+        Exercise e1 = new Exercise(1, 3, 2, 4);
+        Exercise e2 = new Exercise(4, 3, 2, 4);
+        Exercise e3 = new Exercise(3, 3, 2, 4);
+        Exercise e4 = new Exercise(9, 3, 2, 4);
+        Exercise e5 = new Exercise(2, 3, 2, 4);
+
+        List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
+        System.out.println("Ikke sortert" + ovelser.toString());
+        Collections.sort(ovelser);
+        System.out.println("Sortert:" + ovelser.toString());
+
+    }*/
 
 
 }
