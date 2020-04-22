@@ -69,7 +69,7 @@ On the Compiler page, select Build project automatically.
  ![](images/run.gif)
  
 In case you don't want to compile the full project, you can compile some of the classes, by right-clicking on the class that you want to compile, and from the context menu, select <ins> "Recompile", "class name".</ins>
-To run the project you can use the keyboard shortcut **SHIFT +F10, or click on **"Run"** from main toolbar(-the green triangle).
+To run the project you can use the keyboard shortcut **SHIFT +F10**, or click on **"Run"** from main toolbar(-the green triangle).
 Then, go to <ins>"Edit Configurations"</ins> and set it up to **"ExerciseManager"**- that is class that contains our main method.
 **To run all the Junit Tests** at once; from <ins> Settings/Preference dialog </ins>,select menu **"Run"**- **Edit Configurations**; 
 click green plus in the left top corner and select **JUnit**.
