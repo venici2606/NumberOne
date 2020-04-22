@@ -47,4 +47,9 @@ public class PersonTest {
         equals(personTest1.toString().contains("program1"));
         System.out.println("Testing for Check of String");
     }
+
+    @org.junit.Test
+    public void acceptanceTestPerson(){
+
+    }
 }
