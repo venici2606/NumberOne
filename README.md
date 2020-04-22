@@ -144,7 +144,7 @@ production; So, our test criteria is based on creating multiple tests, with a co
 Our vision is to create a system that will manage different exercise programs for a home workout,based on different exercises,equipment, intensity level and duration; as well as the users have the possibility to be awarded a pre-made program or tailor their own program.
 An exercise program that is tailored specifically to your preference,is a great way to stay fit.
 The main functionality of this project is to generate exercises according to user's preference.
-Our system is effective and easy to use.Then only thing you need to do, is to "Run" the ExerciseManager class.
+Our system is effective and easy to use.The only thing you need to do, is to "Run" the ExerciseManager class.
 ExerciseManager is the class that includes most of the methods, and connects the classes together.
 So,while running the ExerciseManager, 
 every input value of the other classes will be added, and you will be able to see the output of the system. 
@@ -153,7 +153,7 @@ every input value of the other classes will be added, and you will be able to se
 
 <a name="tests"></a>
 ## Tests
-The quality of the production code depends on the tests and this project provides the following tests on our work out-app: <br/>
+The quality of the production code depends on the tests and this project provides the following tests on our work out-program: <br/>
 <ins> **Unit Test** </ins> - helps to test each method separately.Unit Test helped us to ensure that code works the way it was intended to. <br/>
 <ins> **Integration Test** </ins> -Checking if the code is compatible with itself-if the methods and classes communicate with each other.<br/>
 <ins> **System Test**</ins>- Testing the entire system(all of our code) gets the proper execution.<br/>
