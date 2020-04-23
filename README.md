@@ -139,9 +139,6 @@ performance testing or backend testing. Here you can see the coverage result for
 According to the criteria, the percentage of test coverage, have to be at least 50%. Considering that, we strove to deliver a complete product without any bugs and faults in 
 production; So, our test criteria is based on creating multiple tests, with a code coverage of 100%.
 
-+her skal vi ha badge og- som viser at testene er passed). 
-
-
 <a name="usage"></a>
 ## Usage
 Our vision is to create a system that will manage different exercise programs for a home workout,based on different exercises,equipment, intensity level and duration; as well as the users have the possibility to be awarded a pre-made program or tailor their own program.
