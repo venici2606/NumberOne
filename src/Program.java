@@ -103,7 +103,8 @@
                 return "We are so sorry, we could not find a appropriate program for you";
             }else {
                 return "We have assigned this program to you:  "+ '\n' +
-                        "The programs overall intensity is "+ person.currentProgram.overallIntensity() + " and this is your preferred intensity " + person.acceptableIntensity + '\n'+
+                        "The programs overall intensity is "+ person.currentProgram.overallIntensity() +
+                        " and this is your preferred intensity " + person.acceptableIntensity + '\n'+
                         person.currentProgram.exercises;
             }
         }

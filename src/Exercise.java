@@ -25,6 +25,7 @@ public abstract class Exercise implements Comparable<Exercise> {
 
             return intensity;
         }
+        //TODO hva gjør denne?
         @Override
         public int compareTo(Exercise o) {
             return this.getIntensity()-o.getIntensity();

@@ -79,13 +79,11 @@ public class ProgramTest {
 
     @Test
     public void sortExerciseTest(){
-
         Exercise e1 = new BalanceExercise(1,3,2,4,"5");
         Exercise e2 = new BalanceExercise(4,3,2,4,"5");
         Exercise e3 = new BalanceExercise(9,3,2,4,"5");
         Exercise e4 = new BalanceExercise(3,3,2,4,"5");
         Exercise e5 = new BalanceExercise(2,3,2,4,"5");
-
         List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
 
         System.out.println("Ikke sortert" + ovelser.toString());
@@ -110,18 +108,25 @@ public class ProgramTest {
         System.out.println(programTest.overallIntensity());
         personTest = new Person("endurance", 2,p);
         assertTrue(p.doesProgramFit(personTest,programTest));
-
+        Person personTest2 = new Person("Swimming", 30, p);
+        assertFalse(p.doesProgramFit(personTest2,programTest));
     }
-
     @Test
-    public void giveProgramTest() {
+    public void giveProgramIsProgramEmptyTest(){
+        Person personTest = new Person("balance", 50,programTest);
+        assertFalse(personTest.currentProgram.exercises.contains(balanceExercise));
+    }
+    @Test
+    public void giveProgramNoProgramForYou(){
         Program p = new Program();
         Person personTest = new Person("balance", 50,programTest);
-
-        assertFalse(personTest.currentProgram.exercises.contains(balanceExercise));
         p.giveProgram(personTest);
         assertTrue(p.giveProgram(personTest) == "We are so sorry, we could not find a appropriate program for you");
-
+    }
+    @Test
+    public void giveProgramIsCorrectExercisesIncludedTest() {
+        Program p = new Program();
+        Person personTest = new Person("balance", 50,programTest);
         exercises.add(enduranceTest);
         exercises.add(flexibilityExercise);
         exercises.add(strengthExercise);
@@ -135,6 +140,17 @@ public class ProgramTest {
         assertTrue(personTest.currentProgram.exercises.contains(enduranceTest));
 
         assertFalse(personTest.currentProgram.exercises.contains(enduranceTest2));
+    }
+    @Test
+    public void giveProgramIsAssumedProgramAssignedTest(){
+        Program p = new Program();
+
+        exercises.add(enduranceTest);
+        exercises.add(flexibilityExercise);
+        exercises.add(strengthExercise);
+        exercises.add(balanceExercise);
+        p.addExercises(exercises);
+        p.makeProgram(exercises, programTest);
 
         Person personTest2 = new Person("balance", 5,p);
         p.giveProgram(personTest2);
@@ -142,7 +158,6 @@ public class ProgramTest {
                 "The programs overall intensity is "+ personTest2.currentProgram.overallIntensity() +
                 " and this is your preferred intensity " + personTest2.acceptableIntensity + '\n'+
                 personTest2.currentProgram.exercises);
-
     }
     /*@Test
     public void sortExerciseTest(){
