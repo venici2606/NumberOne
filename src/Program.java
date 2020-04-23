@@ -1,4 +1,7 @@
     import java.util.ArrayList;
+    import java.util.Collections;
+    import java.util.Arrays;
+    import java.util.List;
 
     public class Program {
         int duration;
@@ -46,7 +49,19 @@
         }
 
 // 1c. Each program has the exercises sorted in order of increasing intensity.
+    public static String sortExercise(ArrayList<Exercise> exercises ){
 
+
+    //String nonSorted = "Ikke sortert\n" + exercises.toString();
+
+
+    Collections.sort(exercises);
+    String sorted = "Sortert: \n" + exercises.toString();
+
+    return sorted;
+
+
+}
 
         //  Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
 // durations of all the exercises it includes (to account for rest).*/
