@@ -5,6 +5,7 @@ public class BalanceExerciseTest {
     public void balanceClassTest(){
         Exercise BalanceExerciseTest = new BalanceExercise(40, 15, 3, 4, "balance board");
 
+
         assertTrue(BalanceExerciseTest.intensity == 40);
         System.out.println("Testing for correct intensity ");
 
