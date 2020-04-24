@@ -8,7 +8,6 @@ public class StrengthExercise extends Exercise {
         this.weights = weights;
         this.equipment = equipment;
     }
-
     @Override
     public String toString() {
         return "For this strength exercise you need "+ weights + " kg " + equipment + '\n' +

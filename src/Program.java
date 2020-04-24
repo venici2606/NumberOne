@@ -1,9 +1,9 @@
     import java.util.ArrayList;
+    import java.util.Collections;
 
     public class Program {
         int duration;
         int intensitylevel;
-
 
         ArrayList<Exercise> exercises = new ArrayList<>();
         ArrayList <Program> listOfPrograms = new ArrayList<>();
@@ -15,7 +15,7 @@
             this.duration += duration;
         }
 
-        // Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
+// Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
         public int overallIntensity(){
             intensitylevel = 0;
             for (Exercise e: exercises){
@@ -25,9 +25,9 @@
             }
             return intensitylevel;
         }
+
 //   Each program keeps account of whether or not it is balanced.
 //  A balanced program has at least one exercise of each type.
-
         public boolean isProgramBalanced() {
             boolean isBalanced = false;
 
@@ -45,10 +45,16 @@
             return isBalanced;
         }
 
-// 1c. Each program has the exercises sorted in order of increasing intensity.
+//  Each program has the exercises sorted in order of increasing intensity.
+        public static String sortExercise(ArrayList<Exercise> exercises ){
 
+            //String nonSorted = "Ikke sortert\n" + exercises.toString();
+            Collections.sort(exercises);
+            String sorted = "Sortert: \n" + exercises.toString();
+            return sorted;
+        }
 
-        //  Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
+ //  Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
 // durations of all the exercises it includes (to account for rest).*/
         public String calculateDuration() {
             int totalDuration = 0;
@@ -58,7 +64,7 @@
             return  "This program takes "+totalDuration+ " minutes from start to finish";
         }
 
-        //   Method for building new Programs
+//   Method for making new Programs
         public void makeProgram(ArrayList<Exercise> exercises, Program p){
             // Exercises are grouped into Programs.
             p.addExercises(exercises);
@@ -74,13 +80,14 @@
                     p.exercises);
         }
 
-        //    Methods for deciding if a Program is appropriate for a given Person
+//    Methods for deciding if a Program is appropriate for a given Person
         public boolean doesProgramFit (Person person, Program program) {
             program.overallIntensity();
             return program.exercises.toString().contains(person.preferredExercise) && program.overallIntensity() <= (person.acceptableIntensity + 10) &&
                     program.overallIntensity() >= (person.acceptableIntensity - 10);
         }
-        //   A method for recommending, from a given collection of Programs, which is most appropriate for a given Person.
+
+ //   A method for recommending, from a given collection of Programs, which is most appropriate for a given Person.
         public String giveProgram( Person person) {
             int number = 100;
             int saveNumber = 100;
@@ -103,7 +110,8 @@
                 return "We are so sorry, we could not find a appropriate program for you";
             }else {
                 return "We have assigned this program to you:  "+ '\n' +
-                        "The programs overall intensity is "+ person.currentProgram.overallIntensity() + " and this is your preferred intensity " + person.acceptableIntensity + '\n'+
+                        "The programs overall intensity is "+ person.currentProgram.overallIntensity() +
+                        " and this is your preferred intensity " + person.acceptableIntensity + '\n'+
                         person.currentProgram.exercises;
             }
         }
