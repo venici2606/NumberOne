@@ -1,8 +1,6 @@
 import org.junit.Test;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Arrays;
-import java.util.List;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -159,23 +157,38 @@ public class ProgramTest {
                 " and this is your preferred intensity " + personTest2.acceptableIntensity + '\n'+
                 personTest2.currentProgram.exercises);
     }
-    /*@Test
-    public void sortExerciseTest(){
+    / @Test
+    public void sortExerciseTest() {
 
-        Collections.sort(exercises);
+        Exercise e1 = new BalanceExercise(1, 3, 2, 4, "5");
+        Exercise e2 = new FlexibilityExercise(4, 3, 2, 4, "5");
+        Exercise e3 = new EnduranceExercise(9, 3, 2, 4, "5");
+        Exercise e4 = new StrengthExercise(3, 3, 2, 4, 5, "5");
 
-        Exercise e1 = new Exercise(1, 3, 2, 4);
-        Exercise e2 = new Exercise(4, 3, 2, 4);
-        Exercise e3 = new Exercise(3, 3, 2, 4);
-        Exercise e4 = new Exercise(9, 3, 2, 4);
-        Exercise e5 = new Exercise(2, 3, 2, 4);
+        ArrayList<Exercise> ovelser = new ArrayList<>();
+        ovelser.add(e1);
+        ovelser.add(e2);
+        ovelser.add(e3);
+        ovelser.add(e4);
 
-        List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
-        System.out.println("Ikke sortert" + ovelser.toString());
-        Collections.sort(ovelser);
-        System.out.println("Sortert:" + ovelser.toString());
+        //If you want to see the unsorted list of exercise after intensity you can remove the comment of the code below
+        //System.out.println("These are the unsorted exercises : \n" + ovelser);
+   
+        String testIntensity = Program.sortExercise(ovelser);
+        
+        assertTrue(ovelser.get(0).intensity == 1);
+        System.out.println("Index 0 is intensity 1");
+       
+        assertTrue(ovelser.get(1).intensity == 3);
+        System.out.println("Index 1 is intensity 3");
+        
+        assertTrue(ovelser.get(2).intensity == 4);
+        System.out.println("Index 2 is intensity 4");
+       
+        assertTrue(ovelser.get(3).intensity == 9);
+        System.out.println("Index 3 is intensity 9");
 
-    }*/
+    }
 
 
 }
