@@ -27,5 +27,10 @@ public class FlexibilityExerciseTest {
             equals(FlexibilityExercise.toString().contains("flexibility"));
             System.out.println("Testing for Check of String");
         }
-}
+
+
+    }
+
+
+
 

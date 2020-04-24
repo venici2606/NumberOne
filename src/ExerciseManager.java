@@ -47,6 +47,9 @@ public class ExerciseManager {
         System.out.println( p.giveProgram(person2));
         System.out.println( p.giveProgram(person3));
 
+
     }
+
 }
+
 
