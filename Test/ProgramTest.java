@@ -1,8 +1,6 @@
 import org.junit.Test;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Arrays;
-import java.util.List;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -79,13 +77,11 @@ public class ProgramTest {
 
     @Test
     public void sortExerciseTest(){
-
         Exercise e1 = new BalanceExercise(1,3,2,4,"5");
         Exercise e2 = new BalanceExercise(4,3,2,4,"5");
         Exercise e3 = new BalanceExercise(9,3,2,4,"5");
         Exercise e4 = new BalanceExercise(3,3,2,4,"5");
         Exercise e5 = new BalanceExercise(2,3,2,4,"5");
-
         List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
 
         System.out.println("Ikke sortert" + ovelser.toString());
@@ -110,18 +106,25 @@ public class ProgramTest {
         System.out.println(programTest.overallIntensity());
         personTest = new Person("endurance", 2,p);
         assertTrue(p.doesProgramFit(personTest,programTest));
-
+        Person personTest2 = new Person("Swimming", 30, p);
+        assertFalse(p.doesProgramFit(personTest2,programTest));
     }
-
     @Test
-    public void giveProgramTest() {
+    public void giveProgramIsProgramEmptyTest(){
+        Person personTest = new Person("balance", 50,programTest);
+        assertFalse(personTest.currentProgram.exercises.contains(balanceExercise));
+    }
+    @Test
+    public void giveProgramNoProgramForYou(){
         Program p = new Program();
         Person personTest = new Person("balance", 50,programTest);
-
-        assertFalse(personTest.currentProgram.exercises.contains(balanceExercise));
         p.giveProgram(personTest);
         assertTrue(p.giveProgram(personTest) == "We are so sorry, we could not find a appropriate program for you");
-
+    }
+    @Test
+    public void giveProgramIsCorrectExercisesIncludedTest() {
+        Program p = new Program();
+        Person personTest = new Person("balance", 50,programTest);
         exercises.add(enduranceTest);
         exercises.add(flexibilityExercise);
         exercises.add(strengthExercise);
@@ -135,6 +138,17 @@ public class ProgramTest {
         assertTrue(personTest.currentProgram.exercises.contains(enduranceTest));
 
         assertFalse(personTest.currentProgram.exercises.contains(enduranceTest2));
+    }
+    @Test
+    public void giveProgramIsAssumedProgramAssignedTest(){
+        Program p = new Program();
+
+        exercises.add(enduranceTest);
+        exercises.add(flexibilityExercise);
+        exercises.add(strengthExercise);
+        exercises.add(balanceExercise);
+        p.addExercises(exercises);
+        p.makeProgram(exercises, programTest);
 
         Person personTest2 = new Person("balance", 5,p);
         p.giveProgram(personTest2);
@@ -142,25 +156,39 @@ public class ProgramTest {
                 "The programs overall intensity is "+ personTest2.currentProgram.overallIntensity() +
                 " and this is your preferred intensity " + personTest2.acceptableIntensity + '\n'+
                 personTest2.currentProgram.exercises);
+    }
+    / @Test
+    public void sortExerciseTest() {
+
+        Exercise e1 = new BalanceExercise(1, 3, 2, 4, "5");
+        Exercise e2 = new FlexibilityExercise(4, 3, 2, 4, "5");
+        Exercise e3 = new EnduranceExercise(9, 3, 2, 4, "5");
+        Exercise e4 = new StrengthExercise(3, 3, 2, 4, 5, "5");
+
+        ArrayList<Exercise> ovelser = new ArrayList<>();
+        ovelser.add(e1);
+        ovelser.add(e2);
+        ovelser.add(e3);
+        ovelser.add(e4);
+
+        //If you want to see the unsorted list of exercise after intensity you can remove the comment of the code below
+        //System.out.println("These are the unsorted exercises : \n" + ovelser);
+   
+        String testIntensity = Program.sortExercise(ovelser);
+        
+        assertTrue(ovelser.get(0).intensity == 1);
+        System.out.println("Index 0 is intensity 1");
+       
+        assertTrue(ovelser.get(1).intensity == 3);
+        System.out.println("Index 1 is intensity 3");
+        
+        assertTrue(ovelser.get(2).intensity == 4);
+        System.out.println("Index 2 is intensity 4");
+       
+        assertTrue(ovelser.get(3).intensity == 9);
+        System.out.println("Index 3 is intensity 9");
 
     }
-    /*@Test
-    public void sortExerciseTest(){
-
-        Collections.sort(exercises);
-
-        Exercise e1 = new Exercise(1, 3, 2, 4);
-        Exercise e2 = new Exercise(4, 3, 2, 4);
-        Exercise e3 = new Exercise(3, 3, 2, 4);
-        Exercise e4 = new Exercise(9, 3, 2, 4);
-        Exercise e5 = new Exercise(2, 3, 2, 4);
-
-        List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
-        System.out.println("Ikke sortert" + ovelser.toString());
-        Collections.sort(ovelser);
-        System.out.println("Sortert:" + ovelser.toString());
-
-    }*/
 
 
 }

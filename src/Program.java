@@ -46,6 +46,17 @@ public class Program {
     }
 
 // 1c. Each program has the exercises sorted in order of increasing intensity.
+        public static String sortExercise(ArrayList<Exercise> exercises ){
+
+            //String nonSorted = "Ikke sortert\n" + exercises.toString();
+
+            Collections.sort(exercises);
+            String sorted = "Sortert: \n" + exercises.toString();
+
+            return sorted;
+
+
+        }
 
 
     //  Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
@@ -98,6 +109,17 @@ public class Program {
                     person.currentProgram = listOfPrograms.get(i);
                 }
             }
+<<<<<<< HEAD
+=======
+            if(person.currentProgram.overallIntensity() == 0){
+                return "We are so sorry, we could not find a appropriate program for you";
+            }else {
+                return "We have assigned this program to you:  "+ '\n' +
+                        "The programs overall intensity is "+ person.currentProgram.overallIntensity() +
+                        " and this is your preferred intensity " + person.acceptableIntensity + '\n'+
+                        person.currentProgram.exercises;
+            }
+>>>>>>> e932804d48d70719daa79b11faa347769af5783a
         }
         if(person.currentProgram.overallIntensity() == 0){
             return "We are so sorry, we could not find a appropriate program for you";
@@ -108,4 +130,8 @@ public class Program {
         }
     }
 
+<<<<<<< HEAD
 }
+=======
+    }
+>>>>>>> e932804d48d70719daa79b11faa347769af5783a
