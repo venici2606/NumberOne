@@ -1,5 +1,8 @@
 import org.junit.Test;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -73,21 +76,6 @@ public class ProgramTest {
         assertEquals(programTest.calculateDuration(), "This program takes "+totalDuration+ " minutes from start to finish");
     }
 
-
-
-    @Test
-    public void sortExerciseTest(){
-        Exercise e1 = new BalanceExercise(1,3,2,4,"5");
-        Exercise e2 = new BalanceExercise(4,3,2,4,"5");
-        Exercise e3 = new BalanceExercise(9,3,2,4,"5");
-        Exercise e4 = new BalanceExercise(3,3,2,4,"5");
-        Exercise e5 = new BalanceExercise(2,3,2,4,"5");
-        List<Exercise> ovelser = new ArrayList<Exercise>(Arrays.asList(e1, e2, e3, e4, e5));
-
-        System.out.println("Ikke sortert" + ovelser.toString());
-        Collections.sort(ovelser);
-        System.out.println("Sortert:" + ovelser.toString());
-    }
     @Test
     public void makeProgramTest(){
         exercises.add(enduranceTest);
@@ -157,7 +145,7 @@ public class ProgramTest {
                 " and this is your preferred intensity " + personTest2.acceptableIntensity + '\n'+
                 personTest2.currentProgram.exercises);
     }
-    / @Test
+    @Test
     public void sortExerciseTest() {
 
         Exercise e1 = new BalanceExercise(1, 3, 2, 4, "5");
