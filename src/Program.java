@@ -46,6 +46,17 @@
         }
 
 // 1c. Each program has the exercises sorted in order of increasing intensity.
+        public static String sortExercise(ArrayList<Exercise> exercises ){
+
+            //String nonSorted = "Ikke sortert\n" + exercises.toString();
+
+            Collections.sort(exercises);
+            String sorted = "Sortert: \n" + exercises.toString();
+
+            return sorted;
+
+
+        }
 
 
         //  Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
