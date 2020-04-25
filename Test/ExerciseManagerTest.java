@@ -80,19 +80,12 @@ public class ExerciseManagerTest {
 
         p.giveProgram(personTesting2);
         assertEquals(p.giveProgram(personTesting2), "We have assigned this program to you:  "+ '\n' + "The programs overall intensity is "+ personTesting2.currentProgram.overallIntensity() + " and this is your preferred intensity " + personTesting2.acceptableIntensity + '\n'+
-                    personTesting2.currentProgram.exercises);
+                personTesting2.currentProgram.exercises);
         assertTrue(personTesting2.toString().contains("balance"));
 
     }
 
 }
-
-
-
-
-
-
-
 
 
 

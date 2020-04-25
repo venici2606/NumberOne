@@ -1,10 +1,5 @@
 import org.junit.Test;
 import java.util.ArrayList;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 05fcda55c3377f515547b53b2dfe7fe6eb7ac551
 import static org.junit.jupiter.api.Assertions.*;
 public class ProgramTest {
 
@@ -26,7 +21,7 @@ public class ProgramTest {
     }
     @Test
     public void overallIntensityTest(){
- //testing to see if intensitylevel is zero before adding exercises.
+        //testing to see if intensitylevel is zero before adding exercises.
         assertEquals(programTest.intensitylevel, 0);
 
         exercises.add(enduranceTest);
@@ -42,16 +37,16 @@ public class ProgramTest {
     }
     @Test
     public void isProgramBalancedTest(){
- //checking if the program is balanced before adding exercises
+        //checking if the program is balanced before adding exercises
         assertFalse(programTest.isProgramBalanced());
 
- //adding exercises of all four types
+        //adding exercises of all four types
         exercises.add(enduranceTest);
         exercises.add(strengthExercise);
         exercises.add(flexibilityExercise);
         exercises.add(balanceExercise);
 
- //checking to see if program is balanced.
+        //checking to see if program is balanced.
         programTest.addExercises(exercises);
         assertTrue(programTest.isProgramBalanced());
     }
@@ -165,46 +160,5 @@ public class ProgramTest {
                 " and this is your preferred intensity " + personTest2.acceptableIntensity + '\n'+
                 personTest2.currentProgram.exercises);
     }
-
-    @Test
-    public void sortExerciseTest() {
-
-        Exercise e1 = new BalanceExercise(1, 3, 2, 4, "5");
-        Exercise e2 = new FlexibilityExercise(4, 3, 2, 4, "5");
-        Exercise e3 = new EnduranceExercise(9, 3, 2, 4, "5");
-        Exercise e4 = new StrengthExercise(3, 3, 2, 4, 5, "5");
-
-        ArrayList<Exercise> ovelser = new ArrayList<>();
-        ovelser.add(e1);
-        ovelser.add(e2);
-        ovelser.add(e3);
-        ovelser.add(e4);
-
-        //If you want to see the unsorted list of exercise after intensity you can remove the comment of the code below
-        //System.out.println("These are the unsorted exercises : \n" + ovelser);
-
-        // unsorted
-        assertTrue(ovelser.get(0).intensity == 1);
-        assertTrue(ovelser.get(1).intensity == 4);
-        assertTrue(ovelser.get(2).intensity == 9);
-        assertTrue(ovelser.get(3).intensity == 3);
-   
-        String testIntensity = Program.sortExercise(ovelser);
-
-        // sorted
-        assertTrue(ovelser.get(0).intensity == 1);
-        System.out.println("Index 0 is intensity 1");
-       
-        assertTrue(ovelser.get(1).intensity == 3);
-        System.out.println("Index 1 is intensity 3");
-        
-        assertTrue(ovelser.get(2).intensity == 4);
-        System.out.println("Index 2 is intensity 4");
-       
-        assertTrue(ovelser.get(3).intensity == 9);
-        System.out.println("Index 3 is intensity 9");
-
-    }
-
 
 }

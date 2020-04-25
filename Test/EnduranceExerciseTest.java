@@ -22,4 +22,3 @@ public class EnduranceExerciseTest {
         System.out.println("Testing toString");
     }
 }
-

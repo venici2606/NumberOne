@@ -16,16 +16,16 @@ public class FlexibilityExerciseTest {
         System.out.println("Testing for correct sets ");
         assertTrue(((FlexibilityExercise) FlexibilityExerciseTest).requirement.contains("nothing"));
         System.out.println("Testing for correct equipment ");
-        }
-
-        @org.junit.Test
-        public void testToString() {
-           assertTrue(FlexibilityExerciseTest.toString().contains("flexibility"));
-            System.out.println("Testing toString");
-        }
-
-
     }
+
+    @org.junit.Test
+    public void testToString() {
+        assertTrue(FlexibilityExerciseTest.toString().contains("flexibility"));
+        System.out.println("Testing toString");
+    }
+
+
+}
 
 
 
