@@ -134,7 +134,7 @@ Select the root directory, and module from where picking up the classpath. Or to
 * The code shows the percentage of the code that has been covered by tests.
 * We decided to only test the functions of the task,ie. methods, line of codes and the program we created, following the criteria we have been assigned.So, there is no stress testing,
 performance testing or backend testing. Here you can see the coverage result for our Classes, methods and lines. 
-![](images/coverageSc.png)
+![](images/coverage100.png)
 
 According to the criteria, the percentage of test coverage, have to be at least 50%. Considering that, we strove to deliver a complete product without any bugs and faults in 
 production; So, our test criteria is based on creating multiple tests, with a code coverage of 100%.

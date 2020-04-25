@@ -30,7 +30,6 @@
 //  A balanced program has at least one exercise of each type.
         public boolean isProgramBalanced() {
             boolean isBalanced = false;
-
             if (exercises.size() >= 4) {
                 if (exercises.toString().contains("endurance")) {
                     if (exercises.toString().contains("flexibility")) {
@@ -48,10 +47,9 @@
 //  Each program has the exercises sorted in order of increasing intensity.
         public static String sortExercise(ArrayList<Exercise> exercises ){
 
-            //String nonSorted = "Ikke sortert\n" + exercises.toString();
+ //String nonSorted = "Ikke sortert\n" + exercises.toString();
             Collections.sort(exercises);
-            String sorted = "Sortert: \n" + exercises.toString();
-            return sorted;
+            return "Sortert: \n" + exercises.toString();
         }
 
  //  Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
@@ -66,7 +64,7 @@
 
 //   Method for making new Programs
         public void makeProgram(ArrayList<Exercise> exercises, Program p){
-            // Exercises are grouped into Programs.
+  // Exercises are grouped into Programs.
             p.addExercises(exercises);
             p.calculateDuration();
             p.isProgramBalanced();

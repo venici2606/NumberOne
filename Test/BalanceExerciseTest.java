@@ -6,7 +6,6 @@ public class BalanceExerciseTest {
 
     @org.junit.Test
     public void balanceClassTest(){
-
         assertEquals(40, BalanceExerciseTest.intensity);
         System.out.println("Testing for correct intensity ");
         assertEquals(15, BalanceExerciseTest.duration);
