@@ -138,6 +138,7 @@ performance testing or backend testing. Here you can see the coverage result for
 
 According to the criteria, the percentage of test coverage, have to be at least 50%. Considering that, we strove to deliver a complete product without any bugs and faults in 
 production; So, our test criteria is based on creating multiple tests, with a code coverage of 100%.
+The only class that we have 0% is Exercise Manager TestClass, and the reason for that is that there is no methods in Exercise Manager that should tests.
 
 <a name="usage"></a>
 ## Usage
@@ -175,7 +176,7 @@ Within the tests:
 
 * **BalanceExerciseTest** , tests the toString method,to create programs and to check if the exercises are extracted from the array and then printed properly.
 * **EnduranceExerciseTest**, imports Assertions, and checks if the intensity,repetitions,sets, equipment and durations are correct for the created programs, as well as testing the toString method.
-* **ExerciseTest**,
+* **ExerciseTest**,tests toString, compare to and tests for if it gets the right intensity. 
 * **FlexibilityExerciseTest**, tests the toString method,to create programs and to check if the exercises are extracted from the array and then printed properly.
 * **PersonTest**, tests if the person gets the preferred exercise, if the intensity is acceptable and if the program is correct for a given person.
 * **ProgramTest**, tests it all the exercise are grouped into programs, if the total duration and overall intensity are correct.As well as testing if the program is balanced.
