@@ -1,12 +1,6 @@
 import org.junit.Test;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-<<<<<<< HEAD
 
-=======
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
 
 import static org.junit.jupiter.api.Assertions.*;
 public class ProgramTest {
@@ -180,7 +174,7 @@ public class ProgramTest {
                 " and this is your preferred intensity " + personTest2.acceptableIntensity + '\n'+
                 personTest2.currentProgram.exercises);
     }
-<<<<<<< HEAD
+
     @Test
     public void sortExerciseTest() {
 
@@ -221,7 +215,5 @@ public class ProgramTest {
 
     }
 
-=======
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
 
 }

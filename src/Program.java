@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collections;
-=======
-    import java.util.ArrayList;
-    import java.util.Collections;
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
 
 public class Program {
     int duration;
     int intensitylevel;
 
-<<<<<<< HEAD
-
     ArrayList<Exercise> exercises = new ArrayList<>();
     ArrayList <Program> listOfPrograms = new ArrayList<>();
-=======
+
         ArrayList<Exercise> exercises = new ArrayList<>();
         ArrayList <Program> listOfPrograms = new ArrayList<>();
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
+
 
     public void addExercises(ArrayList<Exercise> exercises) {
         this.exercises = exercises;
@@ -26,14 +19,14 @@ public class Program {
         this.duration += duration;
     }
 
-<<<<<<< HEAD
+
     // Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
     public int overallIntensity(){
         intensitylevel = 0;
         for (Exercise e: exercises){
             if(e.intensity >intensitylevel){
                 intensitylevel = e.intensity;
-=======
+
 // Each program keeps an account of the overall intensity (the highest intensity among the included exercises).
         public int overallIntensity(){
             intensitylevel = 0;
@@ -41,10 +34,10 @@ public class Program {
                 if(e.intensity >intensitylevel){
                     intensitylevel = e.intensity;
                 }
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
+
             }
         }
-<<<<<<< HEAD
+
         return intensitylevel;
     }
 //   Each program keeps account of whether or not it is balanced.
@@ -52,13 +45,13 @@ public class Program {
 
     public boolean isProgramBalanced() {
         boolean isBalanced = false;
-=======
+
 
 //   Each program keeps account of whether or not it is balanced.
 //  A balanced program has at least one exercise of each type.
         public boolean isProgramBalanced() {
             boolean isBalanced = false;
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
+
 
         if (exercises.size() >= 4) {
             if (exercises.toString().contains("endurance")) {
@@ -83,12 +76,11 @@ public class Program {
             return sorted;
         }
 
-<<<<<<< HEAD
 
     //  Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
-=======
+
  //  Each program has an overall duration.The duration of an exercise( Program) is twice the sum of the
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
+
 // durations of all the exercises it includes (to account for rest).*/
     public String calculateDuration() {
         int totalDuration = 0;
@@ -98,7 +90,6 @@ public class Program {
         return  "This program takes "+totalDuration+ " minutes from start to finish";
     }
 
-<<<<<<< HEAD
     //   Method for building new Programs
     public void makeProgram(ArrayList<Exercise> exercises, Program p){
         // Exercises are grouped into Programs.
@@ -132,7 +123,7 @@ public class Program {
                 for(int i1 =10; i1 > 0; i1--){
                     if(pAI <= (lGO + i1) && pAI >= (lGO - i1)) {
                         number = i1;
-=======
+
 //   Method for making new Programs
         public void makeProgram(ArrayList<Exercise> exercises, Program p){
             // Exercises are grouped into Programs.
@@ -172,7 +163,7 @@ public class Program {
                     if (number < saveNumber) {
                         saveNumber = number;
                         person.currentProgram = listOfPrograms.get(i);
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
+
                     }
                 }
                 if (number < saveNumber) {

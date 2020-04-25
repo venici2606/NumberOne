@@ -56,8 +56,4 @@ public class ExerciseManager {
     }
 
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
