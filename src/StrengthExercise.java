@@ -1,4 +1,3 @@
-
 public class StrengthExercise extends Exercise {
     int weights;
     String equipment;

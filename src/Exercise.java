@@ -5,6 +5,7 @@ public abstract class Exercise implements Comparable<Exercise> {
         int sets;
 
         public Exercise(int intensity, int duration, int repetitions, int sets) {
+<<<<<<< HEAD
 
             if (intensity <= 0 || intensity >= 100) {
                 throw new IllegalArgumentException("Invalid intensity value");
@@ -12,6 +13,9 @@ public abstract class Exercise implements Comparable<Exercise> {
 
 
             // the intensity can't be negative, 0, 100 or higher than 100
+=======
+// the intensity can't be negative, 0, 100 or higher than 100
+>>>>>>> 05fcda55c3377f515547b53b2dfe7fe6eb7ac551
             if (intensity <= 0 || intensity >= 100) {
                     throw new IllegalArgumentException("Invalid intensity value");
             }

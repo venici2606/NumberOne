@@ -1,12 +1,12 @@
 import org.junit.Test;
 import java.util.ArrayList;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 05fcda55c3377f515547b53b2dfe7fe6eb7ac551
 import static org.junit.jupiter.api.Assertions.*;
 public class ProgramTest {
-
-    int duration;
-    int intensitylevel;
 
     ArrayList<Exercise> exercises = new ArrayList<>();
     Exercise enduranceTest = new EnduranceExercise(1,1,1,1,"one");
@@ -24,7 +24,6 @@ public class ProgramTest {
         programTest.setDuration(10);
         assertEquals(programTest.duration, 10);
     }
-
     @Test
     public void overallIntensityTest(){
  //testing to see if intensitylevel is zero before adding exercises.
@@ -32,15 +31,14 @@ public class ProgramTest {
 
         exercises.add(enduranceTest);
         exercises.add(enduranceTest2);
-
         programTest.addExercises(exercises);
         programTest.overallIntensity();
-//testing to see if intensitylevel has changed from zero. here we want 2 as a result,
+
+//testing to see if intensity level has changed from zero. here we want 2 as a result,
 // endurance2 has intensity 2, while endurance1 has intensity 1, so intensity should be 2
 
-        System.out.println(programTest.intensitylevel);
         assertEquals(programTest.intensitylevel, 2);
-
+        System.out.println(programTest.intensitylevel  + " = should be 2");
     }
     @Test
     public void isProgramBalancedTest(){
@@ -60,7 +58,6 @@ public class ProgramTest {
 
     @Test
     public void sortExerciseTest() {
-
         Exercise e1 = new BalanceExercise(1, 3, 2, 4, "5");
         Exercise e2 = new FlexibilityExercise(4, 3, 2, 4, "5");
         Exercise e3 = new EnduranceExercise(9, 3, 2, 4, "5");
@@ -84,7 +81,6 @@ public class ProgramTest {
 
 //If you want to see the unsorted list of exercise after intensity you can remove the comment of the code below
 //System.out.println("These are the unsorted exercises : \n" + ovelser);
-
         Program.sortExercise(ovelser);
         assertEquals(1, ovelser.get(0).intensity);
         System.out.println("Index 0 is intensity 1 after sorting");
@@ -112,7 +108,6 @@ public class ProgramTest {
         programTest.addExercises(exercises);
         assertTrue (programTest.exercises.contains(enduranceTest));
         assertTrue (programTest.exercises.contains(enduranceTest2));
-        //  Failed first try at test assertEquals(exercises.contains(enduranceTest && enduranceTest2) == true);
     }
 
     @Test
@@ -133,14 +128,12 @@ public class ProgramTest {
     }
     @Test
     public void giveProgramNoProgramForYou(){
-        Program p = new Program();
         Person personTest = new Person("balance", 50,programTest);
         p.giveProgram(personTest);
         assertTrue(p.giveProgram(personTest) == "We are so sorry, we could not find a appropriate program for you");
     }
     @Test
     public void giveProgramIsCorrectExercisesIncludedTest() {
-        Program p = new Program();
         Person personTest = new Person("balance", 50,programTest);
         exercises.add(enduranceTest);
         exercises.add(flexibilityExercise);
@@ -148,18 +141,16 @@ public class ProgramTest {
         exercises.add(balanceExercise);
         p.addExercises(exercises);
         p.makeProgram(exercises, programTest);
+        p.giveProgram(personTest);
 
         assertTrue(personTest.currentProgram.exercises.contains(balanceExercise));
         assertTrue(personTest.currentProgram.exercises.contains(strengthExercise));
         assertTrue(personTest.currentProgram.exercises.contains(flexibilityExercise));
         assertTrue(personTest.currentProgram.exercises.contains(enduranceTest));
-
         assertFalse(personTest.currentProgram.exercises.contains(enduranceTest2));
     }
     @Test
     public void giveProgramIsAssumedProgramAssignedTest(){
-        Program p = new Program();
-
         exercises.add(enduranceTest);
         exercises.add(flexibilityExercise);
         exercises.add(strengthExercise);

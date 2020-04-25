@@ -6,11 +6,14 @@ public class BalanceExerciseTest {
 
     @org.junit.Test
     public void balanceClassTest(){
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
         assertTrue(BalanceExerciseTest.intensity == 40);
 =======
+=======
+>>>>>>> 05fcda55c3377f515547b53b2dfe7fe6eb7ac551
         assertEquals(40, BalanceExerciseTest.intensity);
 >>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
         System.out.println("Testing for correct intensity ");

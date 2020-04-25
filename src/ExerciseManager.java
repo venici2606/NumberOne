@@ -8,11 +8,13 @@ public class ExerciseManager {
         ArrayList <Exercise> exercises3 = new ArrayList<>();
         ArrayList <Exercise> exercises4 = new ArrayList<>();
 
-        Program p = new Program();
         Program program1 = new Program();
         Program program2 = new Program();
         Program program3 = new Program();
         Program program4 = new Program();
+
+// We use Program P as an empty program so that we can use it to access the program-class.
+        Program p = new Program();
 
 //Creating exercises to add to a program
         exercises1.add(new StrengthExercise(70, 20, 10, 3, 20, "Dumbbells"));
@@ -42,7 +44,6 @@ public class ExerciseManager {
         exercises4.add(new FlexibilityExercise(50,30,5,6,"Needs to know basic yoga"));
         p.sortExercise(exercises4);
         p.makeProgram(exercises4, program4);
-        
 
         Person person1 = new Person("endurance", 55, p);
         Person person2 = new Person("strength", 80, p);
@@ -51,8 +52,6 @@ public class ExerciseManager {
         System.out.println( p.giveProgram(person1));
         System.out.println( p.giveProgram(person2));
         System.out.println( p.giveProgram(person3));
-
-
     }
 
 }

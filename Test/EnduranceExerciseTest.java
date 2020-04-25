@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class EnduranceExerciseTest {
@@ -20,7 +19,7 @@ public class EnduranceExerciseTest {
     @Test
     public void testToString() {
         assertTrue(EnduranceExerciseTest.toString().contains("endurance"));
-        System.out.println("Testing for Check of String");
+        System.out.println("Testing toString");
     }
 }
 
