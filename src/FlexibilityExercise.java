@@ -14,4 +14,5 @@ public class FlexibilityExercise extends Exercise{
                 repetitions + " Repetitions" +'\n' +
                 sets + " Sets " +'\n'+'\n';
     }
+
 }

@@ -1,30 +1,29 @@
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StrengthExerciseTest {
+    Exercise StrengthExerciseTest  = new StrengthExercise(1, 2, 3, 4,20,  "Dumbell");
     @Test
     public void strengthClassTest(){
-        Exercise StrengthExerciseTest  = new StrengthExercise(1, 2, 3, 4,20,  "Dumbell");
-
-        assertTrue(StrengthExerciseTest.intensity ==1);
+        assertEquals(1, StrengthExerciseTest.intensity);
         System.out.println("Testing for correct intensity ");
-        assertTrue(StrengthExerciseTest.duration ==2);
+        assertEquals(2, StrengthExerciseTest.duration);
         System.out.println("Testing for correct duration ");
-        assertTrue(StrengthExerciseTest.repetitions ==3);
+        assertEquals(3, StrengthExerciseTest.repetitions);
         System.out.println("Testing for correct repetitions ");
-        assertTrue(StrengthExerciseTest.sets ==4);
+        assertEquals(4, StrengthExerciseTest.sets);
         System.out.println("Testing for correct sets ");
-        assertTrue(((StrengthExercise) StrengthExerciseTest).weights ==20);
+        assertEquals(20, ((StrengthExercise) StrengthExerciseTest).weights);
         System.out.println("testing for correct weight");
-        assertTrue(((StrengthExercise) StrengthExerciseTest).equipment.contains("D"));
+        assertTrue(((StrengthExercise) StrengthExerciseTest).equipment.contains("Dumbell"));
         System.out.println("Testing for correct equipment ");
     }
     @Test
     public void testToString() {
-        Exercise  StrengthExercise  = new StrengthExercise(1, 2, 3, 4, 20,"Dumbell");
-        equals(StrengthExercise.toString().contains("s"));
-        System.out.println("Testing for Check of String");
+        assertTrue(StrengthExerciseTest.toString().contains("strength"));
+        System.out.println("Testing toString");
     }
-
 }
 

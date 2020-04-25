@@ -52,5 +52,12 @@ public class ExerciseManager {
         System.out.println( p.giveProgram(person2));
         System.out.println( p.giveProgram(person3));
 
+
     }
+
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385

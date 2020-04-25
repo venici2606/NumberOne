@@ -4,7 +4,6 @@ public abstract class Exercise implements Comparable<Exercise> {
         int repetitions;
         int sets;
 
-
         public Exercise(int intensity, int duration, int repetitions, int sets) {
 
             if (intensity <= 0 || intensity >= 100) {
@@ -33,10 +32,9 @@ public abstract class Exercise implements Comparable<Exercise> {
         }
 
         public int getIntensity(){
-
             return intensity;
         }
-        //TODO hva gjør denne?
+
         @Override
         public int compareTo(Exercise o) {
             return this.getIntensity()-o.getIntensity();

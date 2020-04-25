@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class ExerciseTest {
@@ -10,17 +9,29 @@ public class ExerciseTest {
     void ToStringTest() {
         assertTrue(e.toString().contains("e"));
         assertTrue(e.toString().contains("strength"));
-        System.out.println(toString());
     }
-
     @Test
     void getIntensity() {
-        assertTrue(e.getIntensity() == 11 );
+        assertEquals(11, e.getIntensity());
     }
-
     @Test
+<<<<<<< HEAD
     void compareTo(Exercise e) {
 
+=======
+    void compareTo() {
+        assertTrue(e.compareTo(e) == 0);
+>>>>>>> d16345b99938ab53bda0a0814853a4b8f8986385
     }
+    /*
+    @Test
+    void throwExeption(){
+        Exercise e3 = new StrengthExercise(101, 1,1,1,1,"test");
+
+        assertSame("Invalid intensity value", e3);
+        assertTrue(e3.intensity == "Invalid intensity value");
+
+        We cant test for the throw exception
+    }*/
 
 }
