@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Person {
     String preferredExercise;
     int acceptableIntensity;
@@ -11,32 +9,10 @@ public class Person {
         this.currentProgram = currentProgram;
     }
 
-            /*      Trenger kanskje ikke dette
-                public String getPreferredExercise() {
-                    return preferredExercise;
-                }
-
-                public int getAcceptableIntensity() {
-                    return acceptableIntensity;
-                }
-
-                public String getCurrentProgram(){
-                    return currentProgram;
-                }
-
-             */
-
     @Override
     public String toString() {
         return "Preferred exercise: " + preferredExercise + '\n' +
                 "Acceptable intensity: " + acceptableIntensity + " %" + '\n' +
                 "Current program: " + currentProgram.exercises + '\n';
     }
-/*
-    ArrayList<Person> personData = new ArrayList<>();
-
-    public void gatherPersons(ArrayList<Person> personData) {
-        this.personData = personData;
-    } */
-
 }
