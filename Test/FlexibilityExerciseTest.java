@@ -23,5 +23,10 @@ public class FlexibilityExerciseTest {
            assertTrue(FlexibilityExerciseTest.toString().contains("flexibility"));
             System.out.println("Testing toString");
         }
-}
+
+
+    }
+
+
+
 
