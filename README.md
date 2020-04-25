@@ -135,7 +135,7 @@ Select the root directory, and module from where picking up the classpath. Or to
 * We decided to only test the functions of the task,ie. methods, line of codes and the program we created, following the criteria we have been assigned.So, there is no stress testing,
 performance testing or backend testing. Here you can see the coverage result for our Classes, methods and lines. 
 ![](images/coverageSc.png)
-(Vi får ta en annen sc når koden er ferdig, bildet er her bare for å teste om det går ann å sette bilder.)
+
 According to the criteria, the percentage of test coverage, have to be at least 50%. Considering that, we strove to deliver a complete product without any bugs and faults in 
 production; So, our test criteria is based on creating multiple tests, with a code coverage of 100%.
 
@@ -160,7 +160,7 @@ The quality of the production code depends on the tests and this project provide
 <ins> **Acceptance Test**</ins>- A test that examines whether the software meets the user needs,requirements, and criteria we have been given.<br/>
 <br/>
 The framework that have been used for these tests is JUnit, which enables to write repeatable tests that can be incorporated into a continuous Integration workflow.
-(når vi er helt ferdig med koden, så skal vi ha en gif her, som viser de forskjellige testene)
+![](images/tests.gif)
 
 **NOTE**: it is important for the test class to have the following parts: 
 - [x] imports
@@ -180,8 +180,7 @@ Within the tests:
 * **PersonTest**, tests if the person gets the preferred exercise, if the intensity is acceptable and if the program is correct for a given person.
 * **ProgramTest**, tests it all the exercise are grouped into programs, if the total duration and overall intensity are correct.As well as testing if the program is balanced.
 * **StrengthExerciseTest**, imports Assertions, and checks if the intensity,repetitions,sets, equipment and durations are correct for the created programs, as well as testing the toString method.
-* **ExerciseManager**, tests if the program is appropriate for a given person, both in terms of acceptable intensity and preferred exercise. ...... (komemer mer tekst her når vi er ferdig med koden.)
-
+* **ExerciseManager**, contains Integration test, which tests how well all of the classes/methods are integrating/communicating with each other. 
 
 
 
