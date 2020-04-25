@@ -161,9 +161,16 @@ public class ProgramTest {
 
         //If you want to see the unsorted list of exercise after intensity you can remove the comment of the code below
         //System.out.println("These are the unsorted exercises : \n" + ovelser);
+
+        // unsorted
+        assertTrue(ovelser.get(0).intensity == 1);
+        assertTrue(ovelser.get(1).intensity == 4);
+        assertTrue(ovelser.get(2).intensity == 9);
+        assertTrue(ovelser.get(3).intensity == 3);
    
         String testIntensity = Program.sortExercise(ovelser);
-        
+
+        // sorted
         assertTrue(ovelser.get(0).intensity == 1);
         System.out.println("Index 0 is intensity 1");
        

@@ -41,6 +41,6 @@ public abstract class Exercise implements Comparable<Exercise> {
         public int compareTo(Exercise o) {
             return this.getIntensity()-o.getIntensity();
         }
-        }
+}
 
 

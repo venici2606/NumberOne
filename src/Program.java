@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Program {
     int duration;
@@ -109,8 +110,7 @@ public class Program {
                     person.currentProgram = listOfPrograms.get(i);
                 }
             }
-<<<<<<< HEAD
-=======
+
             if(person.currentProgram.overallIntensity() == 0){
                 return "We are so sorry, we could not find a appropriate program for you";
             }else {
@@ -119,7 +119,7 @@ public class Program {
                         " and this is your preferred intensity " + person.acceptableIntensity + '\n'+
                         person.currentProgram.exercises;
             }
->>>>>>> e932804d48d70719daa79b11faa347769af5783a
+
         }
         if(person.currentProgram.overallIntensity() == 0){
             return "We are so sorry, we could not find a appropriate program for you";
@@ -130,8 +130,5 @@ public class Program {
         }
     }
 
-<<<<<<< HEAD
 }
-=======
-    }
->>>>>>> e932804d48d70719daa79b11faa347769af5783a
+
