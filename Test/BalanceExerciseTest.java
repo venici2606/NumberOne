@@ -1,42 +1,28 @@
-import java.util.ArrayList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BalanceExerciseTest {
-    @org.junit.jupiter.api.Test
-    void testToString() {
+    Exercise BalanceExerciseTest = new BalanceExercise(40, 15, 3, 4, "balance board");
 
-        //TODO clean up
+    @org.junit.Test
+    public void balanceClassTest(){
 
-                // Lager ArrayList for programmene
-                ArrayList<Exercise> exercises = new ArrayList<>();
-
-
-                // Gjorde alle exercisene hver for seg - tungvindt. Laget heller forkortelser - mindre koding / mer ryddig.
-                // Nå heter alle Exercises e
-
-                Exercise e;
-
-                e = new BalanceExercise(3,3,2,4, "Balance board");
-                exercises.add(e);
-                e = new BalanceExercise(9,3,2,4, "Fitness ball");
-                //exercises.add(e);
-
-
-                //  Laget en forkortelse for Program for så å lage programmene
-                // Trenger random input for å teste - Bilal
-                Program p;
-        p = new Program();
-
-
-                //  Her hentes exercisene ut fra arrayet over for så å bli skrevet ut.
-                p.addExercises(exercises);
-                System.out.println(p.exercises);
-
-                System.out.println(e.toString());
-
-                // Slik så det ut før jeg forkortet Exercise til e.
-//        System.out.println(e1.toString());
-//        System.out.println(e2.toString());
-//        System.out.println(e3.toString());
-//        System.out.println(e4.toString());
+        assertEquals(40, BalanceExerciseTest.intensity);
+        System.out.println("Testing for correct intensity ");
+        assertEquals(15, BalanceExerciseTest.duration);
+        System.out.println("Testing for correct duration ");
+        assertEquals(3, BalanceExerciseTest.repetitions);
+        System.out.println("Testing for correct repetitions ");
+        assertEquals(4, BalanceExerciseTest.sets);
+        System.out.println("Testing for correct sets ");
+        assertTrue(((BalanceExercise) BalanceExerciseTest).equipment.contains("board"));
+        System.out.println("Testing for correct equipment ");
     }
+
+    @org.junit.Test
+    public void testToString() {
+       assertTrue(BalanceExerciseTest.toString().contains("balance"));
+        System.out.println("Testing toString");
+    }
+
 }

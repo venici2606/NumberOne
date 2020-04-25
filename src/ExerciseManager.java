@@ -8,8 +8,6 @@ public class ExerciseManager {
         ArrayList <Exercise> exercises3 = new ArrayList<>();
         ArrayList <Exercise> exercises4 = new ArrayList<>();
 
-
-
         Program p = new Program();
         Program program1 = new Program();
         Program program2 = new Program();
@@ -42,7 +40,9 @@ public class ExerciseManager {
         p.makeProgram(exercises3, program3);
 
         exercises4.add(new FlexibilityExercise(50,30,5,6,"Needs to know basic yoga"));
+        p.sortExercise(exercises4);
         p.makeProgram(exercises4, program4);
+        
 
         Person person1 = new Person("endurance", 55, p);
         Person person2 = new Person("strength", 80, p);
@@ -52,13 +52,9 @@ public class ExerciseManager {
         System.out.println( p.giveProgram(person2));
         System.out.println( p.giveProgram(person3));
 
-        //System.out.println(p.sortExercise(exercises3));
-
-
-
-
 
     }
 
 }
+
 

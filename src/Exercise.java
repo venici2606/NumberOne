@@ -4,8 +4,12 @@ public abstract class Exercise implements Comparable<Exercise> {
         int repetitions;
         int sets;
 
-
         public Exercise(int intensity, int duration, int repetitions, int sets) {
+            // the intensity can't be negative, 0, 100 or higher than 100
+            if (intensity <= 0 || intensity >= 100) {
+                    throw new IllegalArgumentException("Invalid intensity value");
+            }
+            
             this.intensity = intensity;
             this.duration = duration;
             this.repetitions = repetitions;
@@ -22,13 +26,13 @@ public abstract class Exercise implements Comparable<Exercise> {
         }
 
         public int getIntensity(){
-
             return intensity;
         }
+
         @Override
         public int compareTo(Exercise o) {
             return this.getIntensity()-o.getIntensity();
         }
-        }
+}
 
 
